@@ -1,0 +1,12 @@
+[[main]]
+    identifier = 'home'
+    name = 'Home'
+    pre = '🏠'
+    pageRef = '/'
+    weight = 10
+[[main]]
+    identifier = 'about'
+    name = 'About'
+    pre = '👩'
+    pageRef = '/about/'
+    weight = 20

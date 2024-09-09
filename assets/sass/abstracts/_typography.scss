@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+# Abstracts: Typography
+----------------------------------------------------------------
+Description: Define theme typography and fonts as Sass variables.
+*/
+
+// Package: rgibsonmusic
+
+// Font used for headings. Font-family variables can contain font stacks.
+$primary-heading-font-family: 'Paperlogy';
+$primary-heading-font-weight: 800;
+
+$secondary-heading-font-family: 'Paperlogy';
+$secondary-heading-font-weight: 600;
+
+// Font used for body text. Font-family variables can contain font stacks.
+$body-font-family: 'SUIT';
+$body-font-weight: 400;
+
+// Default font fallback stack. List of fonts to switch to if prior fonts are unavailable.
+$fallback-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

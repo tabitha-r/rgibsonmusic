@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+# Components: Nav
+----------------------------------------------------------------
+Description: Style main navigation.
+*/
+
+// Package: rgibsonmusic
+
+nav {
+    ul {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-flow: row nowrap;
+
+        li {
+            padding: .4rem .8rem;
+            list-style-type: none;
+
+            a.active {
+                font-size: 4rem;
+            }
+        }
+    }
+}

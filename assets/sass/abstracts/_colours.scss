@@ -1,0 +1,134 @@
+/*--------------------------------------------------------------
+# Abstracts: Colours
+----------------------------------------------------------------
+Description: Define theme colours as Sass variables.
+*/
+
+// Package: rgibsonmusic
+
+// Base colours taken from graffiti in headshot background
+$graffiti_teal: #65d2cc;
+$graffiti_blue: #b1ced6;
+$graffiti_red: #e16472;
+$graffiti_orange: #e9b093;
+$graffiti_pink: #de84c1;
+$graffiti_palepink: #e1b1c3;
+$graffiti_green: #bdcb90;
+$graffiti_black: #33363d;
+$graffiti_white: #edeef1;
+
+// Close colours taken from Swatcho cards
+// Commented out to save but not in use
+/* $graffiti_teal: #15AF97; // Swatcho 106
+$graffiti_blue: #C9E9FB; // Swatcho 008
+$graffiti_red: #E50151; // Swatcho 039
+$graffiti_orange: #F3997B; // Swatcho 057
+$graffiti_pink: #EB619F; // Swatcho 034
+$graffiti_palepink: #F29FC5; // Swatcho 036
+$graffiti_green: #CFE09B; // Swatcho 088
+$graffiti_black: #1D1D1B; // Swatcho 127
+$graffiti_white: #EDEDED; // Swatcho 118 */
+
+// Black & White used to make UI colour scale
+$ui__50: #F7F8F8;
+$ui__100: #EDEEF1; // From Image
+$ui__200: #D8DBDF;
+$ui__300: #B5BAC4;
+$ui__400: #8D95A3;
+$ui__500: #6f7888;
+$ui__600: #5a616f;
+$ui__700: #494f5b;
+$ui__800: #3f434d;
+$ui__900: #33363d; // From Image
+$ui__950: #25272c;
+
+// Colour scale from teal graffiti
+$teal__50: #f2fbfa;
+$teal__100: #d3f4f0;
+$teal__200: #a6e9e3;
+$teal__300: #65d2cc; // From Image
+$teal__400: #45bcb9;
+$teal__500: #2ca0a0;
+$teal__600: #208081;
+$teal__700: #1e6667;
+$teal__800: #1c5153;
+$teal__900: #1b4546;
+$teal__950: #0a2729;
+
+// Colour scale from blue graffiti
+$blue__50: #f5f9fa;
+$blue__100: #eaf1f4;
+$blue__200: #d1e1e6;
+$blue__300: #b1ced6; // From Image
+$blue__400: #79abb7;
+$blue__500: #58919f;
+$blue__600: #447685;
+$blue__700: #385f6c;
+$blue__800: #31505b;
+$blue__900: #2d444d;
+$blue__950: #1e2d33;
+
+// Colour scale from red graffiti
+$red__50: #fdf4f3;
+$red__100: #fce7e8;
+$red__200: #f8d3d5;
+$red__300: #f2afb3;
+$red__400: #ea828b;
+$red__500: #e16472; // From Image
+$red__600: #c9354c;
+$red__700: #a9273f;
+$red__800: #8e233b;
+$red__900: #7a2137;
+$red__950: #430e1a;
+
+// Colour scale from orange graffiti
+$orange__50: #fcf5f0;
+$orange__100: #f8e7dc;
+$orange__200: #f1ccb7;
+$orange__300: #e9b093; // From Image
+$orange__400: #dd7e5a;
+$orange__500: #d55f3a;
+$orange__600: #c7492f;
+$orange__700: #a53729;
+$orange__800: #842f28;
+$orange__900: #6b2823;
+$orange__950: #391211;
+
+// Colour scale from pink graffiti
+$pink__50: #fbf4f9;
+$pink__100: #f9eaf5;
+$pink__200: #f4d6ec;
+$pink__300: #ecb5dc;
+$pink__400: #de84c1; // From Image
+$pink__500: #d163aa;
+$pink__600: #be448d;
+$pink__700: #a33373;
+$pink__800: #872d5f;
+$pink__900: #722951;
+$pink__950: #44132e;
+
+// Colour scale from pale pink graffiti
+$palepink__50: #faf5f7;
+$palepink__100: #f7ecf0;
+$palepink__200: #f0dae3;
+$palepink__300: #e1b1c3; // From Image
+$palepink__400: #d492aa;
+$palepink__500: #c4708b;
+$palepink__600: #af536d;
+$palepink__700: #954156;
+$palepink__800: #7c3848;
+$palepink__900: #69323f;
+$palepink__950: #3e1922;
+
+// Colour scale from green graffiti
+$green__50: #f5f7ee;
+$green__100: #eaeed9;
+$green__200: #d6dfb7;
+$green__300: #bdcb90; // From Image
+$green__400: #a1b368;
+$green__500: #83984a;
+$green__600: #667838;
+$green__700: #4f5d2e;
+$green__800: #404b29;
+$green__900: #384126;
+$green__950: #1c2211;

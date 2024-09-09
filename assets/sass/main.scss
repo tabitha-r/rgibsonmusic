@@ -1,0 +1,101 @@
+/*
+----------------------------------------------------------------
+R Gibson Music Portfolio Site
+----------------------------------------------------------------
+Author: Tabitha Riley
+Author URI: https://www.tabithariley.co.uk/
+Description: Portfolio site for composer Rachael Gibson
+Version: 0.0.0
+Package: rgibsonmusic
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+    - Default
+    - Abstracts
+    - Fonts
+# Components
+    - Global
+    - Pages
+    - Individual Components
+# Base
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+/* Default
+--------------------------------------------- */
+
+
+/* Abstracts
+--------------------------------------------- */
+@use 'abstracts/typography';
+@use 'abstracts/sizing';
+@use 'abstracts/colours';
+
+/* Fonts
+--------------------------------------------- */
+@use 'fonts/paperlogy';
+@use 'fonts/suit';
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/* Global
+--------------------------------------------- */
+@use 'global/text';
+@use 'global/layout';
+
+/* Pages
+--------------------------------------------- */
+
+/* Individual Components
+--------------------------------------------- */
+@use 'components/logo';
+@use 'components/header';
+@use 'components/nav';
+
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+:root {
+    font-size: sizing.$root-size;
+
+    --colour__black: colours.$graffiti_black;
+    --colour__white: colours.$graffiti_white;
+    --colour__teal: colours.$graffiti_teal;
+    --colour__blue: colours.$graffiti_blue;
+    --colour__red: colours.$graffiti_red;
+    --colour__orange: colours.$graffiti_orange;
+    --colour__pink: colours.$graffiti_pink;
+    --colour__palepink: colours.$graffiti_palepink;
+    --colour__green: colours.$graffiti_green;
+};
+
+html {
+    background-color: colours.$graffiti_white;
+};
+
+.skip-to-content-link {
+    background: colours.$graffiti_green;
+    color: #000;
+    height: 30px;
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+	top: 0;
+    transform: translateY(-200%);
+    transition: transform 0.3s;
+    z-index: 99;
+};
+
+.skip-to-content-link:focus {
+  	transform: translateY(0%);
+};

@@ -1,0 +1,79 @@
+/*--------------------------------------------------------------
+# Components: Logo
+----------------------------------------------------------------
+Description: Style logo SVGs.
+*/
+
+// Package: rgibsonmusic
+
+// Import variables
+@use 'abstracts/colours' as *;
+
+// Set CSS variables for changing logo outline depending on active colour scheme
+html.theme__light {
+    --logo-outline: #{$ui__900};
+    --logo-shadow: #{$ui__400};
+};
+
+html.theme__dark {
+    --logo-outline: #{$ui__50};
+    --logo-shadow: #{$ui__300};
+};
+
+// Default Colours for Logo SVGs
+.RGLogo {
+
+    .RGLogo__Outline path {
+        stroke: var(--logo-outline);
+        fill: var(--logo-outline);
+    };
+
+    .RGLogo__R path,
+    path.RGLogo__R {
+        fill: $graffiti_teal;
+    };
+
+    .RGLogo__Neck path {
+        fill: $graffiti_orange;
+    };
+
+    path.RGLogo__G {
+        fill: $graffiti_red;
+    };
+
+    rect.RGLogo__Bar {
+        fill: $graffiti_orange;
+    };
+
+    .RGLogo__Pegs circle {
+        fill: var(--logo-outline);
+    };
+    .RGLogo__Strings path {
+        stroke: var(--logo-outline);
+    };
+
+    path.RGLogo__Rachael,
+    .RGLogo__Rachael path {
+        fill: $graffiti_teal;
+    };
+
+    path.RGLogo__Gibson,
+    .RGLogo__Gibson path {
+        fill: $graffiti_red;
+    };
+};
+
+// Specific logo colours for header
+header svg.RGLogo {
+    height: 3rem;
+    width: auto;
+    filter: drop-shadow(1px 1px 2px var(--logo-shadow));
+
+    .RGLogo__Rachael, .RGLogo__Gibson, .RGLogo__R path, .RGLogo__G {
+        fill: $graffiti_white;
+    };
+
+    .RGLogo__Gibson, .RGLogo__G {
+        fill: $graffiti_teal;
+    };
+};

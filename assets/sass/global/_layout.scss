@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Global: Layout
+----------------------------------------------------------------
+Description: Top-level basic styling for layout.
+*/
+
+// Package: rgibsonmusic
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content image";
+    height: 100vh;
+    overflow: hidden;
+};
+
+div#content-wrapper {
+    margin: 0;
+    padding: 0;
+    grid-area: content;
+    overflow-y: scroll;
+    overflow-x: hidden;
+};
+
+div.design-sidebar {
+    grid-area: image;
+    max-width: 25vw;
+    min-width: 200px;
+    height: 100vh;
+    background-image: url('../../images/rgibson_headshot1.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 0px 10px black;
+};
