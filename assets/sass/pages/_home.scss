@@ -1,0 +1,118 @@
+/*--------------------------------------------------------------
+# Pages: Home
+----------------------------------------------------------------
+Description: Styling specific to homepage
+*/
+
+// Package: rgibsonmusic
+
+main.homepage {
+    div.hero {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column nowrap;
+
+        h1 {
+            width: 60%;
+
+            .RGLogo {
+                width: 100%;
+                height: auto;
+            }
+        };
+
+        ul.title-scroller {
+            list-style-type: none;
+            font-size: 2rem;
+            height: 3rem;
+            overflow: hidden;
+            padding: 0;
+            transition: .2s ease;
+            
+            li {
+                animation: scrollTitle 15s infinite ease;
+                height: 2rem;
+                margin: 0;
+                padding: 1rem 1rem;
+                text-align: center;
+                transition: .2s ease;
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    main.homepage {
+        div.hero ul.title-scroller {
+            animation: none;
+            width: 95%;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-flow: row wrap;
+
+            li {
+                animation: none;
+            }
+        }
+    }
+}
+
+@keyframes scrollTitle {
+    0% {
+        transform: translateY(4rem);
+        opacity: 0%;
+    }
+    1% {
+        transform: translateY(4rem);
+        opacity: 100%;
+    }
+    6% {
+        transform: translateY(-0.9rem);
+        opacity: 100%;
+    }
+    18% {
+        transform: translateY(-0.9rem);
+        opacity: 100%;
+    }
+    30% {
+        transform: translateY(-5rem);
+        opacity: 100%;
+    }
+    42% {
+        transform: translateY(-5rem);
+        opacity: 100%;
+    }
+    54% {
+        transform: translateY(-8.9rem);
+        opacity: 100%;
+    }
+    66% {
+        transform: translateY(-8.9rem);
+        opacity: 100%;
+    }
+    78% {
+        transform: translateY(-12.9rem);
+        opacity: 100%;
+    }
+    90% {
+        transform: translateY(-12.9rem);
+        opacity: 100%;
+    }
+    96% {
+        transform: translateY(-18rem);
+        opacity: 100%;
+    }
+    98% {
+        transform: translateY(-18rem);
+        opacity: 0%;
+    }
+    99% {
+        transform: translateY(4rem);
+        opacity: 0%;
+    }
+}

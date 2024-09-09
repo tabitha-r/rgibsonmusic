@@ -1,0 +1,39 @@
+@use 'abstracts/colours' as *;
+
+html.theme__light {
+    --main-bg: #{$ui__100};
+    --header-bg: #{$ui__200};
+    --shadow: #{$ui__400};
+
+    --main-font: #{$ui__900};
+
+    --subtle-button-hover: #{$ui__300};
+    --subtle-button-active: #{$ui__400};
+    --subtle-button-disabled: #{$ui__200};
+
+    --colour-scheme-hover: #{$blue__200};
+    --colour-scheme-hover-shadow: #{$blue__600};
+
+    --nav-link: #{$ui__500};
+    --nav-link-hover: #{$ui__300};
+    --nav-link-active: #{$ui__400};
+};
+
+html.theme__dark {
+    --main-bg: #{$ui__700};
+    --header-bg: #{$ui__800};
+    --shadow: #{$ui__950};
+
+    --main-font: #{$ui__50};
+
+    --subtle-button-hover: #{$ui__500};
+    --subtle-button-active: #{$ui__600};
+    --subtle-button-disabled: #{$ui__700};
+
+    --colour-scheme-hover: #{$orange__100};
+    --colour-scheme-hover-shadow: #{$orange__300};
+
+    --nav-link: #{$ui__900};
+    --nav-link-hover: #{$ui__500};
+    --nav-link-active: #{$ui__600};
+};

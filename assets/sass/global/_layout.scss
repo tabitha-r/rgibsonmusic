@@ -5,6 +5,7 @@ Description: Top-level basic styling for layout.
 */
 
 // Package: rgibsonmusic
+
 body {
     margin: 0;
     padding: 0;
@@ -21,6 +22,7 @@ div#content-wrapper {
     grid-area: content;
     overflow-y: scroll;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 };
 
 div.design-sidebar {

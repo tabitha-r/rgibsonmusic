@@ -1,1 +1,21 @@
-console.log('TypeScript loaded');
+/*--------------------------------------------------------------
+ * TypeScript Scripts
+ *----------------------------------------------------------------
+ * Description: Load all relevant TypeScript functions and variables
+ * 
+ * Package: rgibsonmusic
+*/
+
+// Import functions and variables
+import { detectTheme, toggleTheme } from './changeTheme';
+
+// Upon load:
+// Check for saved theme
+detectTheme();
+// Target colour scheme toggle button
+const toggleColourSchemeButton = document.querySelector('#toggle-colour-scheme');
+// Check button targeted correctly
+if (toggleColourSchemeButton) {
+    // Add toggle function event listener
+    toggleColourSchemeButton.addEventListener('click', toggleTheme)
+};

@@ -10,3 +10,9 @@
     pre = '👩'
     pageRef = '/about/'
     weight = 20
+[[main]]
+    identifier = 'contact'
+    name = 'Contact'
+    pre = '✉'
+    pageRef = '/contact/'
+    weight = 100

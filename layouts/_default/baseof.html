@@ -6,6 +6,8 @@
       <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
     {{ end }}
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 
     <meta charset="UTF-8">
@@ -28,20 +30,21 @@
         {{ block "header" . }}
             
         {{ end }}
+
+        {{ if .Page.IsHome }}
+            <main id="main-wrapper" class="homepage" aria-role="main">
+        {{ else }}
+            <main id="main-wrapper" class="{{ .Params.page_class }}" aria-role="main">
+        {{ end }}
             
-        <main id="main-wrapper">
             
             {{ block "main" . }}
             
             {{ end }}
             
-            {{ block "sidebar" . }}
-            
-            {{ end }}
-            
         </main>
     
-        <footer>Feet</footer>
+        {{ partial "footer" }}
 
     </div>
 

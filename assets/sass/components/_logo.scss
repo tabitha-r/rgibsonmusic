@@ -16,12 +16,15 @@ html.theme__light {
 };
 
 html.theme__dark {
-    --logo-outline: #{$ui__50};
-    --logo-shadow: #{$ui__300};
+    --logo-outline: #{$ui__950};
+    --logo-shadow: #{$ui__950};
 };
 
 // Default Colours for Logo SVGs
 .RGLogo {
+    path, rect, circle {   
+        transition: .2s ease;
+    }
 
     .RGLogo__Outline path {
         stroke: var(--logo-outline);

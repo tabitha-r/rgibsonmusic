@@ -4,9 +4,23 @@
 
 {{ define "main" }}
 
-    <p>Rachael Gibson is ridiculously cool. We stan.</p>
+    <div class="hero">
+        <h1>
+            {{ partial "logo_image_text.svg" }}
+        </h1>
+        <ul class="title-scroller">
+            <li>🎸 Guitarist.</li>
+            <li>🎼 Composer.</li>
+            <li>🎛 Sound Artist.</li>
+            <li>🎧 Audio Editor.</li>
+        </ul>
 
-    {{ partial "logo_image_text.svg" }}
+        <a href="#intro">⬇</a>
+    </div>
 
+    <div id="intro">
+        <h2>Welcome!</h2>
+        <p>The official site for the absolute baller of a bean, Ray Gibson.</p>
+    </div>
 
 {{ end }}

@@ -10,6 +10,9 @@ Package: rgibsonmusic
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+FontAwesome icons are created by Fonticons, Inc.
+Included under the FontAwesome Free License for FontAwesome icons 6.5.0 https://fontawesome.com/license
 */
 
 /*--------------------------------------------------------------
@@ -38,11 +41,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @use 'abstracts/typography';
 @use 'abstracts/sizing';
 @use 'abstracts/colours';
+@use 'abstracts/themes';
 
 /* Fonts
 --------------------------------------------- */
 @use 'fonts/paperlogy';
 @use 'fonts/suit';
+@use 'fonts/tr';
+
+/* FontAwesome
+--------------------------------------------- */
+@use 'fontawesome/fontawesome';
+@use 'fontawesome/brands';
+@use 'fontawesome/solid';
+@use 'fontawesome/regular';
 
 /*--------------------------------------------------------------
 # Components
@@ -54,12 +66,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Pages
 --------------------------------------------- */
+@use 'pages/home';
 
 /* Individual Components
 --------------------------------------------- */
 @use 'components/logo';
 @use 'components/header';
 @use 'components/nav';
+@use 'components/footer';
 
 
 /*--------------------------------------------------------------
@@ -80,8 +94,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 };
 
 html {
-    background-color: colours.$graffiti_white;
+    background-color: var(--main-bg);
+    transition: .2s ease;
+    color: var(--main-font);
 };
+
+main {
+    z-index: 3;
+}
 
 .skip-to-content-link {
     background: colours.$graffiti_green;
