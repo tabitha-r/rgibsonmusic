@@ -71,7 +71,7 @@ nav {
                 font-weight: 700;
 
                 &:hover, &:focus {
-                    animation: gradient 8s ease infinite;
+                    animation: navgradient 8s ease infinite;
                     
                     box-shadow: none;
                 };
@@ -93,7 +93,7 @@ nav {
     }
 }
 
-@keyframes gradient {
+@keyframes navgradient {
 	0% {
 		background-position: 0% 50%;
 	}

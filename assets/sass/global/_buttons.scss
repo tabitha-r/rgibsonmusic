@@ -1,0 +1,156 @@
+/*--------------------------------------------------------------
+# Global: Buttons
+----------------------------------------------------------------
+Description: Styling for general buttons and links
+*/
+
+// Package: rgibsonmusic
+
+// Import colours
+@use 'abstracts/colours' as *;
+@use 'abstracts/typography' as *;
+
+button.button,
+a.button,
+.button {
+    &__teal {
+        --main-button-bg: #{$graffiti_teal};
+        --button-font: #{$graffiti_black};
+
+        --active-button-bg: #{$teal__500};
+        --disabled-button-bg: #{$teal__900};
+
+        --hover-button-1-bg: #{$teal__300};
+        --hover-button-2-bg: #{$pink__400};
+        --hover-button-3-bg: #{$teal__100};
+        --hover-button-4-bg: #{$green__300};
+    };
+    &__blue {
+        --main-button-bg: #{$graffiti_blue};
+        --button-font: #{$graffiti_black};
+
+        --active-button-bg: #{$blue__500};
+        --disabled-button-bg: #{$blue__900};
+
+        --hover-button-1-bg: #{$blue__300};
+        --hover-button-2-bg: #{$palepink__300};
+        --hover-button-3-bg: #{$blue__100};
+        --hover-button-4-bg: #{$pink__400};
+    };
+    &__red {
+        --main-button-bg: #{$graffiti_red};
+        --button-font: #{$graffiti_black};
+
+        --active-button-bg: #{$red__500};
+        --disabled-button-bg: #{$red__900};
+
+        --hover-button-1-bg: #{$red__300};
+        --hover-button-2-bg: #{$green__300};
+        --hover-button-3-bg: #{$red__100};
+        --hover-button-4-bg: #{$teal__300};
+    };
+    &__orange {
+        --main-button-bg: #{$graffiti_orange};
+        --button-font: #{$graffiti_black};
+
+        --active-button-bg: #{$orange__500};
+        --disabled-button-bg: #{$orange__900};
+
+        --hover-button-1-bg: #{$orange__300};
+        --hover-button-2-bg: #{$teal__300};
+        --hover-button-3-bg: #{$orange__100};
+        --hover-button-4-bg: #{$pink__400};
+    };
+    &__pink {
+        --main-button-bg: #{$graffiti_pink};
+        --button-font: #{$graffiti_black};
+
+        --active-button-bg: #{$pink__500};
+        --disabled-button-bg: #{$pink__900};
+
+        --hover-button-1-bg: #{$pink__400};
+        --hover-button-2-bg: #{$teal__300};
+        --hover-button-3-bg: #{$pink__100};
+        --hover-button-4-bg: #{$blue__300};
+    };
+    &__palepink {
+        --main-button-bg: #{$graffiti_palepink};
+        --button-font: #{$graffiti_black};
+
+        --active-button-bg: #{$palepink__500};
+        --disabled-button-bg: #{$palepink__900};
+
+        --hover-button-1-bg: #{$palepink__300};
+        --hover-button-2-bg: #{$blue__300};
+        --hover-button-3-bg: #{$palepink__100};
+        --hover-button-4-bg: #{$green__600};
+    };
+    &__green {
+        --main-button-bg: #{$graffiti_green};
+        --button-font: #{$graffiti_black};
+
+        --active-button-bg: #{$green__500};
+        --disabled-button-bg: #{$green__900};
+
+        --hover-button-1-bg: #{$green__300};
+        --hover-button-2-bg: #{$teal__300};
+        --hover-button-3-bg: #{$green__100};
+        --hover-button-4-bg: #{$pink__400};
+    };
+
+    i {
+        font-size: 1.4rem;
+    };
+
+    & {
+        display: block;
+
+        font-family: $primary-heading-font-family, $fallback-stack;
+        font-weight: 800;
+        font-size: 1rem;
+        letter-spacing: .2rem;
+        text-align: center;
+    
+        padding: .6rem 1.2rem;
+        border-radius: 25px;
+        text-decoration: none;
+    
+        transition: .2s ease;
+    
+        background-color: var(--main-button-bg);
+        background-image: none;
+        color: var(--button-font);
+        border: 4px solid $graffiti_black;
+    };
+    
+    &:hover, &:focus, &:focus-within {
+        text-decoration: underline;
+        cursor: pointer;
+        background-image: linear-gradient(-45deg, var(--hover-button-1-bg), var(--hover-button-2-bg), var(--hover-button-3-bg), var(--hover-button-4-bg));
+        background-size: 400% 400%;
+        animation: buttongradient 6s ease infinite;
+        scale: 110%;
+    };
+
+    &:disabled {
+        background-color: var(--disabled-button-bg);
+        background-image: none;
+    };
+
+    &:active {
+        background-color: var(--active-button-bg);
+        background-image: none;
+    };
+};
+
+@keyframes buttongradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

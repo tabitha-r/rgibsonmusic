@@ -6,6 +6,9 @@ Description: Top-level basic styling for layout.
 
 // Package: rgibsonmusic
 
+// Import variables
+@use 'abstracts/colours';
+
 body {
     margin: 0;
     padding: 0;
@@ -17,12 +20,26 @@ body {
 };
 
 div#content-wrapper {
-    margin: 0;
+    margin: 4.1rem 0 0 0;
     padding: 0;
     grid-area: content;
     overflow-y: scroll;
     overflow-x: hidden;
+
     scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+
+    main {
+        margin: 1rem 1.4rem;
+
+        min-height: 100%;
+
+        article.content-article {
+            max-width: 50vw;
+            min-width: 300px;
+            margin: 0 auto;
+        }
+    }
 };
 
 div.design-sidebar {

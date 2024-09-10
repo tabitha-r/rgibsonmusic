@@ -6,10 +6,15 @@ Description: Styling the repeating footer element
 
 // Package: rgibsonmusic
 
+
 footer {
     width: 100%;
-    padding: 1rem auto;
+    padding: 1rem;
     text-align: center;
+    height: 4rem;
+    position: relative;
+    clear: both;
+    background-color: var(--header-bg);
 
     p, a {
         font-size: .8rem;

@@ -1,5 +1,5 @@
 {{ define "header" }}
-    {{ partial "header" }}
+    {{ partial "header" . }}
 {{ end }}
 
 {{ define "main" }}
@@ -15,7 +15,7 @@
             <li>🎧 Audio Editor.</li>
         </ul>
 
-        <a href="#intro">⬇</a>
+        <a class="button button__green" href="#intro" aria-label="Scroll down"><i class="fa-regular fa-hand-point-down fa-fw" aria-label="Scroll down"></i></a>
     </div>
 
     <div id="intro">

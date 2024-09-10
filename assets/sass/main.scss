@@ -63,6 +63,7 @@ Included under the FontAwesome Free License for FontAwesome icons 6.5.0 https://
 --------------------------------------------- */
 @use 'global/text';
 @use 'global/layout';
+@use 'global/buttons';
 
 /* Pages
 --------------------------------------------- */
@@ -99,10 +100,6 @@ html {
     color: var(--main-font);
 };
 
-main {
-    z-index: 3;
-}
-
 .skip-to-content-link {
     background: colours.$graffiti_green;
     color: #000;
@@ -118,4 +115,14 @@ main {
 
 .skip-to-content-link:focus {
   	transform: translateY(0%);
+};
+
+div.scroll-test {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url('../../images/joe_woods_4zaq5xy5m_c_unsplash1.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 };

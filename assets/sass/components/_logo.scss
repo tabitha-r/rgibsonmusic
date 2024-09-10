@@ -22,6 +22,10 @@ html.theme__dark {
 
 // Default Colours for Logo SVGs
 .RGLogo {
+    --rachael-fill: #{$graffiti_teal};
+    --gibson-fill: #{$graffiti_red};
+    --neck-fill: #{$graffiti_orange};
+
     path, rect, circle {   
         transition: .2s ease;
     }
@@ -33,19 +37,19 @@ html.theme__dark {
 
     .RGLogo__R path,
     path.RGLogo__R {
-        fill: $graffiti_teal;
+        fill: var(--rachael-fill);
     };
 
     .RGLogo__Neck path {
-        fill: $graffiti_orange;
+        fill: var(--neck-fill);
     };
 
     path.RGLogo__G {
-        fill: $graffiti_red;
+        fill: var(--gibson-fill);
     };
 
     rect.RGLogo__Bar {
-        fill: $graffiti_orange;
+        fill: var(--neck-fill);
     };
 
     .RGLogo__Pegs circle {
@@ -57,12 +61,12 @@ html.theme__dark {
 
     path.RGLogo__Rachael,
     .RGLogo__Rachael path {
-        fill: $graffiti_teal;
+        fill: var(--rachael-fill);
     };
 
     path.RGLogo__Gibson,
     .RGLogo__Gibson path {
-        fill: $graffiti_red;
+        fill: var(--gibson-fill);
     };
 };
 
@@ -72,11 +76,14 @@ header svg.RGLogo {
     width: auto;
     filter: drop-shadow(1px 1px 2px var(--logo-shadow));
 
+    --gibson-fill: #{$graffiti_teal};
+    --rachael-fill: #{$graffiti_white};
+
     .RGLogo__Rachael, .RGLogo__Gibson, .RGLogo__R path, .RGLogo__G {
-        fill: $graffiti_white;
+        fill: var(--rachael-fill);
     };
 
     .RGLogo__Gibson, .RGLogo__G {
-        fill: $graffiti_teal;
+        fill: var(--gibson-fill);
     };
 };
