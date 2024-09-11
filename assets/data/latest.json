@@ -1,0 +1,24 @@
+{
+    "news": [
+        {
+            "show": false,
+            "title": "The event/project title",
+            "description": "Rachael is currently doing this thing. All the following info is optional.",
+            "date": "24 Dec 2024",
+            "time": "19:00",
+            "location": "O2 Academy, Liverpool",
+            "location_google_url": "https://maps.app.goo.gl/tmhS7GzUTVp9DXvaA",
+            "link": "https://www.tabithariley.co.uk/",
+            "link_label": "🎟 Get tickets"
+        },
+        {
+            "show": true,
+            "title": "Concert",
+            "description": "Rachael is premiereing a brand new composition as part of the Music Festival.",
+            "date": "24 Dec 2024",
+            "time": "19:00",
+            "location": "O2 Academy, Liverpool",
+            "link": "https://www.tabithariley.co.uk/"
+        }
+    ]
+}

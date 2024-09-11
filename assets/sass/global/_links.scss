@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+# Global: Links
+----------------------------------------------------------------
+Description: Styling for general inline text links
+*/
+
+// Package: rgibsonmusic
+
+a {
+    color: var(--text-link);
+    transition: .2s ease;
+    text-decoration: none;
+
+    &:focus, &:hover {
+        color: var(--text-link-hover);
+        text-decoration: underline;
+
+        span.material-symbols-outlined {
+            scale: 120%;
+        }
+    };
+
+    &:active {
+        color: var(--text-link-active);
+    };
+
+    &:disabled {
+        color: var(--text-link-disabled);
+    };
+
+    span.material-symbols-outlined {
+        font-size: inherit;
+        transition: .2s ease;
+    };
+}

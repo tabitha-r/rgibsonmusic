@@ -1,0 +1,2 @@
+defaultMarkdownHandler = "goldmark"
+unsafe = true

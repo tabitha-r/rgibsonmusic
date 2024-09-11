@@ -14,6 +14,17 @@ header a.homepage-header-logo {
 };
 
 main.homepage {
+    div.homepage-textbox {
+        max-width: 50vw;
+        min-width: 300px;
+        margin: 0 auto;
+        padding: 1rem;
+
+        a.button {
+            margin: .2rem auto;
+        }
+    };
+
     div.hero {
         width: 100%;
         height: 90vh;
@@ -40,12 +51,16 @@ main.homepage {
             transition: .2s ease;
             
             li {
-                animation: scrollTitle 15s infinite ease;
+                animation: scrollTitle 18s infinite ease;
                 height: 2rem;
                 margin: 0;
                 padding: 1rem 1rem;
                 text-align: center;
                 transition: .2s ease;
+
+                &.smaller-text {
+                    font-size: 1.6rem;
+                }
             }
         };
 
@@ -69,6 +84,8 @@ main.homepage {
 
             li {
                 animation: none;
+                height: auto;
+                padding: .3rem .6rem;
             }
         }
     }
@@ -82,44 +99,52 @@ main.homepage {
     1% {
         opacity: 100%;
     }
-    6% {
+    5% {
         transform: translateY(-0.9rem);
         opacity: 100%;
     }
-    18% {
+    15% {
         transform: translateY(-0.9rem);
         opacity: 100%;
     }
-    30% {
+    25% {
         transform: translateY(-5rem);
         opacity: 100%;
     }
-    42% {
+    35% {
         transform: translateY(-5rem);
         opacity: 100%;
     }
-    54% {
+    45% {
         transform: translateY(-8.9rem);
         opacity: 100%;
     }
-    66% {
+    55% {
         transform: translateY(-8.9rem);
         opacity: 100%;
     }
-    78% {
+    65% {
         transform: translateY(-12.9rem);
         opacity: 100%;
     }
-    90% {
+    75% {
         transform: translateY(-12.9rem);
         opacity: 100%;
     }
-    96% {
-        transform: translateY(-18rem);
+    85% {
+        transform: translateY(-16.9rem);
+        opacity: 100%;
+    }
+    95% {
+        transform: translateY(-16.9rem);
         opacity: 100%;
     }
     98% {
-        transform: translateY(-18rem);
+        transform: translateY(-20rem);
+        opacity: 100%;
+    }
+    99% {
+        transform: translateY(-20rem);
         opacity: 0%;
     }
     100% {

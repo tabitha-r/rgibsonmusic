@@ -1,0 +1,66 @@
+/*--------------------------------------------------------------
+# Pages: Projects
+----------------------------------------------------------------
+Description: Styling specific to projects list and single pages
+*/
+
+// Package: rgibsonmusic
+
+main.project {
+    div.title {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        overflow: hidden;
+
+        display: grid;
+        place-items: center;
+
+        padding: 1rem 2rem;
+
+        text-align: center;
+
+        margin-bottom: 1.2rem;
+
+        h1 {
+            font-size: 6rem;
+            color: var(--default-white);
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: var(--border);
+            font-weight: 900;
+        }
+    }
+
+    iframe {
+        border-radius: 8px;
+        border: 3px solid var(--border);
+        margin: .2rem auto;
+    }
+
+    section {
+        figure {
+            width: min-content;
+        }
+        figure figcaption p {
+            margin: 0;
+        }
+        figure.float-right {
+            float: right;
+        }
+        img {
+            max-width: 500px;
+            border-radius: 8px;
+        }
+    }
+
+    div.projects-navigation {
+        width: 80%;
+        padding: 1rem;
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+    }
+}

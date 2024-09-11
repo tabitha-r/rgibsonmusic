@@ -13,14 +13,32 @@
             <li>🎼 Composer.</li>
             <li>🎛 Sound Artist.</li>
             <li>🎧 Audio Editor.</li>
+            <li class="smaller-text">🏆 Winner of the Rodewald Award 2017.</li>
         </ul>
 
         <a class="button button__green" href="#intro" aria-label="Scroll down"><i class="fa-regular fa-hand-point-down fa-fw" aria-label="Scroll down"></i></a>
     </div>
 
-    <div id="intro">
-        <h2>Welcome!</h2>
+    <div id="intro" class="homepage-textbox">
+        <h2>👋 Welcome!</h2>
         <p>The official site for the absolute baller of a bean, Ray Gibson.</p>
+        <p>🛑🚧 TODO: Introduction and segue to About page</p>
+    </div>
+
+    {{ partial "latest" }}
+
+    <div class="homepage-textbox">
+        <h2>🎼 Compositions</h2>
+        <p>Ray has written lots of stuff.</p>
+        <p>🛑🚧 TODO: Segue to Compositions list</p>
+        <a class="button button__pink" href="/compositions/">Hear More <i class="fa-regular fa-hand-point-right" role="presentation"></i></a>
+    </div>
+
+    <div class="homepage-textbox">
+        <h2>✏ Projects</h2>
+        <p>Ray has been on lots of adventures.</p>
+        <p>🛑🚧 TODO: Segue to Projects list</p>
+        <a class="button button__red" href="/projects/">Learn More <i class="fa-regular fa-hand-point-right" role="presentation"></i></a>
     </div>
 
 {{ end }}

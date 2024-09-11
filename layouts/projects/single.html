@@ -1,0 +1,41 @@
+{{ define "header" }}
+    
+    {{ partial "header" . }}
+
+{{ end }}
+
+{{ define "main"}}
+
+{{ $img := ( print .RelPermalink "/images/featured.webp") }}
+{{ $img := cond (fileExists $img) $img "/images/featured.webp" }}
+    <article class="content-article">
+
+
+        <div 
+            class="title"
+            style="background-image: linear-gradient(-45deg, rgba(101, 210, 204, 0.75), rgba(222, 132, 193, 0.75), rgba(189, 203, 144, 0.75)), url({{ $img }});"
+        >
+            <h1>{{ .Title }}</h1>
+        </div>
+
+        <section>
+            {{ .Content }}
+        </section>
+    </article>
+
+    <div class="projects-navigation">
+        {{ $pages := .CurrentSection.Pages }}
+        <div class="next-project">
+            {{ with $pages.ByDate.Next . }}
+            <a href="{{ .Permalink }}">⬅ {{ .Title | truncate 50 "..." }}</a>
+            {{ end }}
+        </div>
+        
+        <div class="previous-project">
+            {{ with $pages.ByDate.Prev . }}
+            <a href="{{ .Permalink }}">{{ .Title | truncate 50 "..."}} ➡</a>
+            {{ end }}
+        </div>
+    </div>
+
+{{ end }}

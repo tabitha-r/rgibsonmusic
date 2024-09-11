@@ -34,7 +34,7 @@ nav {
             transform: translateY(1.4rem);
             transition: .2s ease;
 
-            border: 3px solid #33363d;
+            border: 3px solid var(--border);
 
             &:focus-within, &:hover {
                 transform: translateY(1rem);
@@ -72,6 +72,8 @@ nav {
 
                 &:hover, &:focus {
                     animation: navgradient 8s ease infinite;
+                    text-decoration: none;
+                    color: white;
                     
                     box-shadow: none;
                 };

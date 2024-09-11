@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+# Components: Socials
+----------------------------------------------------------------
+Description: Style social links
+*/
+
+// Package: rgibsonmusic
+
+ul.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .4rem;
+    padding: 0;
+
+    li {
+        list-style-type: none;
+        margin: .2rem;
+
+        .social-link {
+            --link-highlight: #65d2cc;
+            &__x-twitter {
+                --link-highlight: #000000;
+            };
+            &__instagram {
+                --link-highlight: #E4405F;
+            };
+            &__facebook {
+                --link-highlight: #0866FF;
+            };
+            &__tiktok {
+                --link-highlight: #000000;
+            };
+            &__linkedin {
+                --link-highlight: #0A66C2;
+            };
+            &__youtube {
+                --link-highlight: #FF0000;
+            };
+            &__soundcloud {
+                --link-highlight: #FF5500;
+            };
+        }
+
+        a {
+            font-size: 1.8rem;
+            display: block;
+            transition: .2s ease;
+            color: var(--font-main);
+            transform-origin: center;
+            border-radius: 50%;
+            padding: .4rem .2rem;
+
+            &:hover, &:focus {
+                scale: 120%;
+                color: var(--link-highlight);
+                background: var(--subtle-button-hover);
+            };
+
+            &:active {
+                scale: 100%;
+                background: var(--subtle-button-active);
+            };
+
+            &:disabled {
+                color: var(--subtle-button-disabled);
+            }
+        }
+    }
+}

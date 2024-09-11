@@ -29,12 +29,12 @@ div#content-wrapper {
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
 
-    main {
+    main:not(.homepage) {
         margin: 1rem 1.4rem;
 
         min-height: 100%;
 
-        article.content-article {
+        article.content-article, div.content-article {
             max-width: 50vw;
             min-width: 300px;
             margin: 0 auto;
@@ -47,7 +47,6 @@ div.design-sidebar {
     max-width: 25vw;
     min-width: 200px;
     height: 100vh;
-    background-image: url('../../images/rgibson_headshot1.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

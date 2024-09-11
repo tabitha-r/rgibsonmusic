@@ -1,0 +1,4 @@
+{{ $img := ( print .context.RelPermalink "/images/featured.webp") }}
+{{ $img := cond (fileExists $img) $img "/images/featured.webp" }}
+
+<img src="{{ $img }}" alt="{{ .context.Title }}" class="featured-image">

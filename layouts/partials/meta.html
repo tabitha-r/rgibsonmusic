@@ -1,0 +1,26 @@
+{{ $img := print .Permalink "images/featured.webp" }}
+
+{{ if not (fileExists (print .RelPermalink "images/featured.webp")) }}
+    {{ $img = "/images/featured.webp" }}
+{{ end }} 
+
+{{ $description := .Description | default .Summary }}
+
+
+    <link rel="canonical" href="{{ .Permalink | absURL }}">
+
+    <meta name="description" content="{{ $description }}">
+    <meta name="image" content="{{ $img | absURL }}">
+
+    <meta property="og:site_name" content="Rachael Gibson - Composer, Sound Artist, Audio Editor">
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ .Permalink | absURL }}">
+    <meta property="og:image" content="{{ $img | absURL }}">
+    <meta property="og:description" content="{{ $description }}">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ .Title }}">
+    <meta name="twitter:description" content="{{ $description }}">
+    <meta name="twitter:image" content="{{ $img | absURL }}">
+    <meta name="twitter:image:alt" content="{{ .Title }}">

@@ -1,0 +1,16 @@
+<a
+    href="{{ .Get "url" }}"
+    {{ if .Get "external" }}
+        target="_blank"
+        rel="noreferrer"
+    {{ end }}
+    class="button button__{{ .Get "colour" }}"
+> 
+    {{ if .Get "icon" }}
+        <i class="{{ .Get "icon" }}" aria-label="{{ .Get "icon-label"}}"></i>
+    {{ end }}
+    {{ .Get "link-text" }}
+    {{ if .Get "external" }}
+        {{ partial "external-link-icon" }}
+    {{ end }}
+</a>

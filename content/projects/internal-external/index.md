@@ -1,0 +1,12 @@
++++
+title = 'INTERNAL / EXTERNAL'
+date = 2024-09-11T16:16:37+01:00
+description = 'An untraditional approach to creating a soundtrack'
+type = 'projects'
+[params]
+    page_class = 'project'
++++
+
+{{< vimeo videoid="351190550?h=df175dbb06" caption="INTERNAL / EXTERNAL by Beth Madeley" >}}
+
+INTERNAL / EXTERNAL, by Beth Madeley, is based on the idea of using animation as ‘therapy’ by exploring stream-of-consciousness frame by frame and free-writing to externalize internal feelings left from trauma. In this animation video, I worked very closely with the animator in discussing what she wanted to achieve sonically; however, we did not follow traditional working methods in order to achieve this. We wanted to create a soundtrack which complemented the visuals but wasn’t directly related to them by being created before for the animator to work with, I was asked to approach the music in a similar way to how the artist approached the animation, as a ‘therapy’ on an instrument before looking at the video. This was achieved through recording different improvisations over multiple sessions exploring my own stream of consciousness, using a violin which was mic’d up and sent thorough delay and reverb pedals. These recordings were then cut, and I added additional sounds where necessary in post once the video was sent to me to edit against in order to emphasise important changes in the visual narrative. I decided to use the violin as it was an instrument I felt could use to create a sense of intimacy and had a lot of sonic potential using extended techniques such as rubbing and tapping the body of the instrument as well as breathing and whispering into the ‘f’ holes, whilst at the same time maintaining a coherent sound world. Because the animation is abstract and not designed to accurately portray real world visuals as closely, I felt this allowed more room to play with sound design and musical material to add to this more abstract visual world that the artist had created. It would be interesting in future to explore how maybe the manipulation of real-world sounds could create a different perspective on the visual material and how a duo or larger ensemble could approach this idea of improvisation as therapy for an animated film based on these ideas.

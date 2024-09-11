@@ -1,0 +1,108 @@
+/*--------------------------------------------------------------
+# Pages: Compositions
+----------------------------------------------------------------
+Description: Styling specific to compositions list and single pages
+*/
+
+// Package: rgibsonmusic
+
+main.compositions {
+
+    .works-identifier {
+        &__solo {
+            --works-identifier-colour: var(--works-identifier-solo);
+        };
+        &__soundtrack {
+            --works-identifier-colour: var(--works-identifier-soundtrack);
+        }
+    }
+
+    p span.works-identifier {
+        padding: .2rem;
+        background-color: var(--works-identifier-colour);
+        color: var(--default-black) !important;
+        border-radius: 8px;
+    }
+
+    ul.cards-wrapper {
+        list-style-type: none;
+        padding: 0;
+        width: 90%;
+        margin: 1rem auto;
+
+        li.composition-card {
+            border: 3px solid var(--border);
+            border-radius: 8px;
+            margin: .8rem;
+            padding: 0;
+            overflow: hidden;
+
+            display: grid;
+            grid-template-columns: 2rem 3fr 1fr;
+
+            div.works-identifier {
+                background-color: var(--works-identifier-colour);
+                padding: .2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: row nowrap;
+
+                grid-area: 1 / 1 / 2 / 2;
+            };
+
+            &:not(.composition-card__with-embed) {
+                div.info {
+                    grid-area: 1 / 2 / 2 / 4;
+                };
+            };
+
+            &__with-embed {
+                div.embed {
+                    grid-area: 1 / 3 / 2 / 4;
+                };
+
+                div.info {
+                    grid-area: 1 / 2 / 2 / 3;
+                }
+            };
+
+            div.info {
+                border-left: 3px solid var(--border);
+                padding: .8rem 1.2rem;
+                background-color: var(--container-bg);
+
+                h2, p {
+                    display: inline;
+                    font-size: 1.2rem;
+                }
+            }
+
+            div.embed {
+                border-left: 3px solid var(--border);
+
+                &__soundcloud {
+                    background-color: #FF5500;
+                }
+                iframe {
+                    margin: 0;
+                    padding: 0;
+                    min-width: 300px;
+                    height: 100% !important;
+                }
+
+                a {
+                    display: grid;
+                    place-items: center;
+                    min-width: 200px;
+                    height: 100%;
+                    min-height: 3rem;
+                }
+
+                a.composition-link-button {
+                    background-color: var(--default-red);
+                }
+            }
+        }
+    }
+}

@@ -1,39 +1,75 @@
 @use 'abstracts/colours' as *;
 
+:root {
+    --default-white: #{$graffiti_white};
+    --default-black: #{$graffiti_black};
+    --default-teal: #{$graffiti_teal};
+    --default-blue: #{$graffiti_blue};
+    --default-red: #{$graffiti_red};
+    --default-orange: #{$graffiti_orange};
+    --default-pink: #{$graffiti_pink};
+    --default-palepink: #{$graffiti_palepink};
+    --default-green: #{$graffiti_green};
+}
+
 html.theme__light {
     --main-bg: #{$ui__100};
     --header-bg: #{$ui__200};
     --shadow: #{$ui__400};
+    --border: #{$ui__900};
+
+    --container-bg: #{$ui__50};
 
     --main-font: #{$ui__900};
+    --secondary-font: #{$ui__600};
 
-    --subtle-button-hover: #{$ui__300};
-    --subtle-button-active: #{$ui__400};
-    --subtle-button-disabled: #{$ui__200};
+    --subtle-button-hover: #{$ui__100};
+    --subtle-button-active: #{$ui__300};
+    --subtle-button-disabled: #{$ui__50};
 
-    --colour-scheme-hover: #{$blue__200};
-    --colour-scheme-hover-shadow: #{$blue__600};
+    --colour-scheme-hover: #{$blue__600};
+    --colour-scheme-hover-shadow: #{$blue__200};
 
     --nav-link: #{$ui__500};
     --nav-link-hover: #{$ui__300};
     --nav-link-active: #{$ui__400};
+
+    --text-link: #{$teal__600};
+    --text-link-hover: #{$teal__400};
+    --text-link-active: #{$teal__700};
+    --text-link-disabled: #{$teal__300};
+
+    --works-identifier-solo: #{$green__300};
+    --works-identifier-soundtrack: #{$orange__300};
 };
 
 html.theme__dark {
     --main-bg: #{$ui__600};
     --header-bg: #{$ui__800};
     --shadow: #{$ui__950};
+    --border: #{$ui__950};
+
+    --container-bg: #{$ui__700};
 
     --main-font: #{$ui__50};
+    --secondary-font: #{$ui__300};
 
-    --subtle-button-hover: #{$ui__500};
-    --subtle-button-active: #{$ui__600};
-    --subtle-button-disabled: #{$ui__700};
+    --subtle-button-hover: #{$ui__600};
+    --subtle-button-active: #{$ui__700};
+    --subtle-button-disabled: #{$ui__800};
 
-    --colour-scheme-hover: #{$orange__100};
+    --colour-scheme-hover: #{$orange__200};
     --colour-scheme-hover-shadow: #{$orange__300};
 
     --nav-link: #{$ui__900};
     --nav-link-hover: #{$ui__500};
     --nav-link-active: #{$ui__600};
+
+    --text-link: #{$teal__300};
+    --text-link-hover: #{$teal__100};
+    --text-link-active: #{$teal__400};
+    --text-link-disabled: #{$teal__800};
+
+    --works-identifier-solo: #{$green__400};
+    --works-identifier-soundtrack: #{$orange__400};
 };

@@ -1,0 +1,46 @@
+{{ define "header" }}
+    
+    {{ partial "header" . }}
+
+{{ end }}
+
+{{ define "main"}}
+
+    <article class="content-article">
+        <h1>{{ .Title }} ({{ .Params.year }})</h1>
+        <p>{{ .Description }}</p>
+
+        {{ if .Params.embed_type }}
+            <section class="embed">
+                {{ if eq .Params.embed_type "soundcloud" }}
+                    {{ partial "large-soundcloud" (dict "params" .Params "title" .Title) }}
+                {{ else if eq .Params.embed_type "internal" }}
+                    <a href="{{ .Params.link }}">
+                        Learn more
+                    </a>
+                {{ else if eq .Params.embed_type "listen-link" }}
+                    <a
+                        href="{{ .Params.link }}"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="composition-link-button button button__palepink"
+                    >
+                        <span>Have a listen {{ partial "external-link-icon" }}</span>
+                    </a>
+                {{ else if eq .Params.embed_type "learn-link" }}
+                    <a
+                        href="{{ .Params.link }}"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="composition-link-button button button__green"
+                    >
+                        <span>Learn more {{ partial "external-link-icon" }}</span>
+                    </a>
+                {{ end }}
+            </section>
+        {{ end }}
+
+        <a class="button button__teal" href="/compositions/">See more compositions</a>
+    </article>
+
+{{ end }}

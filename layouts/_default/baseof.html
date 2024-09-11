@@ -14,6 +14,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    {{ partial "meta" . }}
+
     {{ if .IsHome }}
         <title>{{ .Site.Title }} 🎶 Composer, Sound Artist, Audio Editor</title>
     {{ else }}
@@ -48,7 +50,9 @@
 
     </div>
 
-    <div class="design-sidebar"></div>
+    
+    {{ $bg := resources.Get "images/rgibson_headshot1.webp"}}
+    <div class="design-sidebar" style="background-image: url({{ $bg }})"></div>
     
     {{ $js := resources.Get "ts/main.ts" | js.Build }}
     <script src="{{ $js.Permalink }}" defer></script>
