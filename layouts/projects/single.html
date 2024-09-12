@@ -7,11 +7,10 @@
 {{ define "main"}}
 
 {{ $img := ( print .RelPermalink "images/featured.webp") }}
+{{ $img := (print (relURL $img)) }}
 {{ $img := cond (fileExists $img) $img "images/featured.webp" }}
-{{ $img := (print .Site.BaseURL $img) }}
+{{ $img := (print .Site.BaseURL $img)}}
     <article class="content-article">
-
-
         <div 
             class="title"
             style="background-image: linear-gradient(-45deg, rgba(101, 210, 204, 0.75), rgba(222, 132, 193, 0.75), rgba(189, 203, 144, 0.75)), url({{ $img }});"
