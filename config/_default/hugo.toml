@@ -1,4 +1,5 @@
 # baseURL = 'https://www.rgibsonmusic.co.uk/'
-baseURL = 'https://www.tabithariley.co.uk/rgibsonmusic/'
+# baseURL = 'https://www.tabithariley.co.uk/rgibsonmusic/'
+baseURL = 'https://localhost:1313/'
 languageCode = 'en-gb'
 title = 'Rachael Gibson'

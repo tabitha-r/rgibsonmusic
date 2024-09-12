@@ -55,6 +55,6 @@
     <div class="design-sidebar" style="background-image: url({{ $bg }})"></div>
     
     {{ $js := resources.Get "ts/main.ts" | js.Build }}
-    <script src="{{ $js.Permalink }}" defer></script>
+    <script src="{{ $js.RelPermalink }}" defer></script>
 </body>
 </html>

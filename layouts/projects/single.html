@@ -6,8 +6,9 @@
 
 {{ define "main"}}
 
-{{ $img := ( print .RelPermalink "/images/featured.webp") }}
-{{ $img := cond (fileExists $img) $img "/images/featured.webp" }}
+{{ $img := ( print .RelPermalink "images/featured.webp") }}
+{{ $img := cond (fileExists $img) $img "images/featured.webp" }}
+{{ $img := (print .Site.BaseURL $img) }}
     <article class="content-article">
 
 
