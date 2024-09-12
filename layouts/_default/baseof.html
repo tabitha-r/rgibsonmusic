@@ -52,13 +52,11 @@
 
     
     {{ $bg := resources.Get "images/rgibson_headshot1.webp"}}
-    {{ $bg := (print .Site.BaseURL $bg.RelPermalink)}}
-    <div class="design-sidebar" style="background-image: url({{ $bg }})">
+    <div class="design-sidebar" style="background-image: url({{ $bg.RelPermalink }})">
 
     </div>
     
     {{ $js := resources.Get "ts/main.ts" | js.Build }}
-    {{ $js := (print .Site.BaseURL $js.RelPermalink) }}
-    <script src="{{ $js }}" defer></script>
+    <script src="{{ $js.RelPermalink }}" defer></script>
 </body>
 </html>

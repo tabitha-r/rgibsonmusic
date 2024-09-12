@@ -2,6 +2,5 @@
 {{ $img := ( print .RelPermalink "images/featured.webp") }}
 {{ $img := (print (relURL $img)) }}
 {{ $img := cond (fileExists $img) $img "images/featured.webp" }}
-{{ $img := (print .Site.BaseURL $img)}}
 
 <img src="{{ $img }}" alt="{{ .context.Title }}" class="featured-image">
