@@ -1,0 +1,28 @@
+{{ $residencies := dict }}
+{{ with resources.Get "data/cv.json" }}
+{{ with . | transform.Unmarshal }}
+    {{ $residencies = where .residencies "show" true }}
+    {{ with $residencies }}
+        <section class="cv-section cv-section__residencies">
+            <h2 class="cv-section__title">Selected Workshops & Residencies</h2>
+            <table class="cv-table cv-table__residencies-list">
+                {{ range $residencies }}
+                    <tr>
+                        <td class="residencies-programme">
+                            {{ .role }} at <strong>{{ .programme }}</strong>
+                        </td>
+                        <td class="residencies-year">
+                            {{ .year }}
+                        </td>
+                        {{ if .additional_info }}
+                            <td class="residencies-additional">
+                                {{ .additional_info }}
+                            </td>
+                        {{ end}}
+                    </tr>
+                {{ end }}
+            </table>
+        </section>
+    {{ end }}
+{{ end }}
+{{ end }}

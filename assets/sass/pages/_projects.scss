@@ -79,7 +79,7 @@ main.projects {
             border-radius: 8px;
             margin: .5rem;
             width: 550px;
-            height: 200px;
+            height: 140px;
             background-color: var(--container-bg);
             overflow: hidden;
 
@@ -94,22 +94,23 @@ main.projects {
                 flex-grow: 3;
 
                 p {
-                    max-width: 20rem;
+                    height: 100%;
+                    overflow-y: scroll;
+                    padding: .2rem;
+                    margin: 0;
+                    border-top: 3px solid var(--border);
                 }
-            }
 
 
-            h2 {
-                margin: 0;
-                padding: .2rem;
-                background-color: var(--default-teal);
-                border-bottom: 3px solid var(--border);
-                color: var(--default-black);
-            }
-
-            p {
-                padding: .2rem;
-                margin: 0;
+                h2 {
+                    margin: 0;
+                    padding: .2rem .5rem;
+                    background-color: var(--default-teal);
+                    border: 3px solid var(--default-white);
+                    color: var(--default-black);
+                    font-size: 1.4rem;
+                    border-radius: 8px;
+                }
             }
 
             a {

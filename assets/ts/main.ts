@@ -9,6 +9,7 @@
 // Import functions and variables
 import { detectTheme, toggleTheme } from './changeTheme';
 import { hideNotice } from './hideNotice';
+import { handlePrint } from './print';
 
 // Upon load:
 // Check for saved theme
@@ -27,4 +28,12 @@ const hideDraftNoticeButton = document.querySelector('#hide-notice');
 if (hideDraftNoticeButton) {
     // Add hide function event listener
     hideDraftNoticeButton.addEventListener('click', hideNotice);
-}
+};
+
+// Target print button
+const printButton = document.querySelector('#print-page-button');
+// Check button targeted correctly
+if (printButton) {
+    // Add print function event listener
+    printButton.addEventListener('click', handlePrint);
+};

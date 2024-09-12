@@ -1,0 +1,249 @@
+{
+    "works": [
+        {
+            "title": "PreBiotic Complex",
+            "year": 2024,
+            "description": "for the House of Bedlam featuring video score, live visuals and amplified instruments, Aldeburgh Festival 2024 (As part of BPYA programme)",
+            "show": true
+        },
+        {
+            "title": "Wayward Sisters",
+            "year": 2024,
+            "description": "for Guitar Trio, electronics and video score – to be performed at the Tung Auditorium, Liverpool in July 2024",
+            "show": true
+        },
+        {
+            "title": "Persephone",
+            "year": 2022,
+            "description": "for Baritone Guitar and Electronics, Sound Pioneers Project commission by the Yorkshire Sound Women’s Network",
+            "show": true
+        },
+        {
+            "title": "Rest By The Light",
+            "year": 2021,
+            "description": "for flute, oboe, violin and cello, Britten Sinfonia Opus 1 Scheme",
+            "show": true
+        },
+        {
+            "title": "Installation piece – Royal Court Theatre",
+            "year": 2021,
+            "description": "Wanderscapes project by the Old Courts Wigan",
+            "show": true
+        },
+        {
+            "title": "A Picture of Transparency",
+            "year": 2020,
+            "description": "PRiSM 8 Cubed series with RNCM and the The University of Liverpool commission",
+            "show": true
+        },
+        {
+            "title": "If We Break Before The Dawn",
+            "year": 2018,
+            "description": "for bass clarinet and electronic sounds, Cheltenham Composer Academy 2018",
+            "show": true
+        },
+        {
+            "title": "",
+            "year": 2024,
+            "description": "",
+            "show": false
+        }
+    ],
+    "residencies": [
+        {
+            "programme": "Britten Pears Young Artist Programme",
+            "year": "2023/2024",
+            "role": "Participant",
+            "additional_info": "(Composition, Alternative Performance and Performance Art (CAPPA) programme)",
+            "show": true
+        },
+        {
+            "programme": "Delia Derbyshire Day Younger",
+            "year": "",
+            "role": "Volunteer",
+            "additional_info": "",
+            "show": true
+        },
+        {
+            "programme": "Britten Sinfonia Opus 1",
+            "year": "2021",
+            "role": "Participant",
+            "additional_info": "",
+            "show": true
+        },
+        {
+            "programme": "YSWN Sound Pioneer",
+            "year": "2020/21",
+            "role": "Participant",
+            "additional_info": "with performance of new work at Electric Spring Festival 2022",
+            "show": true
+        },
+        {
+            "programme": "Illuminate Women’s Music Season 1",
+            "year": "2020/21",
+            "role": "Artist in Residence",
+            "additional_info": "",
+            "show": true
+        },
+        {
+            "programme": "Electric Storm Residency",
+            "year": "2020",
+            "role": "Participant",
+            "additional_info": "run by Delia Derbyshire Day",
+            "show": true
+        },
+        {
+            "programme": "Cheltenham Composers Academy",
+            "year": "2018",
+            "role": "Participant",
+            "additional_info": "",
+            "show": true
+        },
+        {
+            "programme": "Both Sides Now Residency",
+            "year": "2017",
+            "role": "Participant",
+            "additional_info": "with Beth Orton, Manchester, run by Brighter Sound",
+            "show": true
+        },
+        {
+            "programme": "RPS Phase 1 Women’s Conducting Workshops",
+            "year": "2017",
+            "role": "Participant",
+            "additional_info": "",
+            "show": true
+        },
+        {
+            "programme": "",
+            "year": 2024,
+            "role": "Participant",
+            "additional_info": "",
+            "show": false
+        }
+    ],
+    "education": [
+        {
+            "institution": "The University of Liverpool",
+            "course_name": "PhD in Composition & Technology",
+            "start_date": "October 2022",
+            "end_date": "present",
+            "grade": "",
+            "current": true,
+            "modules": [],
+            "additional_info": "Funded by the North West Consortium Doctoral Training Partnership, AHRC",
+            "show": true
+        },
+        {
+            "institution": "Goldsmiths, University of London",
+            "course_name": "Creative Practice (Music)",
+            "start_date": "2018",
+            "end_date": "2019",
+            "grade": "MMus with Distinction",
+            "current": false,
+            "modules": [
+                "composition",
+                "interactive music systems",
+                "studio practice",
+                "thesis"
+            ],
+            "additional_info": "",
+            "show": true
+        },
+        {
+            "institution": "The University of Liverpool",
+            "course_name": "BA (Hons) Music/Popular Music",
+            "start_date": "2014",
+            "end_date": "2017",
+            "grade": "1:1",
+            "current": false,
+            "modules": [
+                "composition",
+                "orchestration",
+                "technology",
+                "performance",
+                "dissertation"
+            ],
+            "additional_info": "",
+            "show": true
+        },
+        {
+            "institution": "",
+            "course_name": "",
+            "start_date": "",
+            "end_date": "",
+            "grade": "",
+            "current": false,
+            "modules": [],
+            "additional_info": "",
+            "show": false
+        }
+    ],
+    "employment": [
+        {
+            "role": "Graduate Teaching Assistant",
+            "employer": "The University of Liverpool",
+            "start_date": "September 2023",
+            "end_date": "present",
+            "additional_info": "",
+            "modules": [
+                "MUSI130 – Introduction to Classical Music History",
+                "MUSI108 – Introduction to Sound Recording and Production",
+                "MUSI170 – Introduction to Music and AV media",
+                "MUSI213 – Sampling and Remixing",
+                "MUSI380 – Exploring Rhythm, Form and Musical Time"
+            ],
+            "responsibilities": [],
+            "show": true
+        },
+        {
+            "role": "New Noise Centre Tutor 11 – 16 y/o (Guitar)",
+            "employer": "Future Yard, Birkenhead",
+            "start_date": "January 2022",
+            "end_date": "August 2023",
+            "additional_info": "",
+            "modules": [],
+            "responsibilities": [],
+            "show": true
+        },
+        {
+            "role": "University Music Administrator",
+            "employer": "University of Birmingham",
+            "start_date": "January 2022",
+            "end_date": "October 2022",
+            "additional_info": "",
+            "modules": [],
+            "responsibilities": [],
+            "show": true
+        },
+        {
+            "role": "Location Sound Recordist & Sound Designer",
+            "employer": "First Take Films Ltd.",
+            "start_date": "June 2021",
+            "end_date": "January 2022",
+            "additional_info": "Credits include Sound Design for feature film 1 in 200, working with participants on the Reel Recovery Programme",
+            "modules": [],
+            "responsibilities": [],
+            "show": true
+        },
+        {
+            "role": "Audio Editor/ Sound Designer",
+            "employer": "Paper Twin Wedding Films and Yeti Creative",
+            "start_date": "July 2018",
+            "end_date": "June 2021",
+            "additional_info": "Credits include sound design and music for Primark’s Stranger Things and Harry Potter campaigns",
+            "modules": [],
+            "responsibilities": [ "Creation of original sound design elements", "audio editing", "clean-up" ],
+            "show": true
+        },
+        {
+            "role": "",
+            "employer": "",
+            "start_date": "",
+            "end_date": "",
+            "additional_info": "",
+            "modules": [],
+            "responsibilities": [],
+            "show": false
+        }
+    ]
+}

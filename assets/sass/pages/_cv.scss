@@ -1,0 +1,266 @@
+/*--------------------------------------------------------------
+# Pages: CV
+----------------------------------------------------------------
+Description: Styling specific to CV page, including print styling
+*/
+
+// Package: rgibsonmusic
+
+body.page__cv {
+    header.cv-header {
+        text-align: center;
+        display: none;
+
+        h1 {
+            margin: 8px;
+        }
+
+        ul li span.material-symbols-outlined {
+            font-size: inherit;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            flex-flow: row nowrap;
+            margin: 12px;
+            
+            &.roles {
+                justify-content: center;
+            }
+
+            &.contact {
+                justify-content: space-evenly;
+                padding: 6px;
+                width: 80%;
+                margin: 6px auto !important;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: inset 0 0 0 1000px #ddd;
+            }
+
+            li.role {
+                margin-left: 6px;
+                font-size: 16px;
+
+                &:not(:last-child):after {
+                    content: "•";
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    footer.cv-footer {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row nowrap;
+        box-shadow: inset 0 0 0 1000px #ddd;
+        padding: 8px;
+        border-radius: 8px;
+
+        width: fit-content;
+        margin: 6px auto;
+
+        p, svg {
+            margin: 6px;
+        }
+
+        p {
+            width: 200px;
+        }
+
+        svg {
+            width: 100px;
+            height: auto;
+            background-color: transparent;
+        }
+    }
+}
+
+@media only print {
+    body.page__cv {
+
+        background: none;
+        grid-template-columns: 1fr;
+        grid-template-areas: "content";
+        overflow: visible;
+
+        button#print-page-button {
+            display: none;
+        };
+
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+            margin: 6px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        h4 {
+            font-size: 17px;
+        }
+        h5, th {
+            font-size: 16px;
+        }
+        h6 {
+            font-size: 14px;
+        }
+        p, ol, ul, a, button, input, label, td {
+            font-size: 14px;
+        }
+
+        div#content-wrapper {
+            display: block;
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+        }
+
+        header.cv-header {
+            display: block;
+        }
+
+        footer.cv-footer {
+            display: flex;
+
+            path#qr {
+                fill: #000 !important;
+            }
+        }
+        
+        header.main-header,
+        div.design-sidebar,
+        footer.main-footer,
+        div#draft-warning-notice {
+            display: none;
+        }
+
+        main.cv {
+            margin: 0;
+            background: none;
+            overflow: visible;
+
+            article.content-article {
+                max-width: 100vw !important;
+                margin: 0;
+                overflow: visible;
+                &>h1 {
+                    display: none;
+                }
+
+                ul {
+                    margin: 0;
+                }
+            }
+        }
+
+        section.cv-section {
+            div.employment-element {
+                padding: 4px;
+                margin: 6px 6px 6px 22px;
+                border: 2px solid black;
+                border-radius: 8px;
+
+            }
+            div.employment-extra-notes {
+                p {
+                    margin: 6px;
+                }
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-flow: row wrap;
+                    padding: 0;
+                    font-size: 13px;
+                    padding-left: 20px;
+
+                    li {
+                        margin-left: 6px;
+                    
+                        &:not(:last-child):after {
+                            content: "•";
+                            margin-left: 6px;
+                        }
+                    }
+                }
+
+            }
+            table.cv-table {
+                border-radius: 8px;
+
+                &:not(.cv-table__employment-element) {
+                    margin: 6px 6px 6px 22px;
+                    border: 2px solid black;
+
+                }
+
+                tr:nth-of-type(2n), &__employment-element {
+                    box-shadow: inset 0 0 0 1000px #eee;
+                }
+
+                &__employment-element {
+                    margin: 0 0 0 6px;
+                }
+
+                tr.evenly-spacd-td {
+                    td {
+                        width: fit-content;
+                    }
+                }
+
+                td.works-year,
+                td.residencies-year,
+                td.education-date,
+                td.employment-date {
+                    width: min-content;
+                    text-align: center;
+                }
+
+                td.works-title,
+                td.residencies-programme,
+                td.education-course,
+                td.employment-role,
+                td.employment-employer {
+                    width: max-content;
+                }
+
+                td.works-title {
+                    font-weight: 700;
+                }
+
+                td.employment-employer {
+                    font-style: italic;
+                }
+
+                td {
+                    padding: 4px;
+                    ul {
+                        list-style-type: none;
+                        display: flex;
+                        align-items: center;
+                        flex-flow: row wrap;
+                        padding: 0;
+                        font-size: 13px;
+
+                        li {
+                            margin-left: 6px;
+                        
+                            &:not(:last-child):after {
+                                content: "•";
+                                margin-left: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}   

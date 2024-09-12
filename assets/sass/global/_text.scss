@@ -18,7 +18,7 @@ h1 {
 };
 
 // Secondary Level Headings
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6, th {
     font-family: typography.$secondary-heading-font-family, 
                  typography.$fallback-stack;
     font-weight: typography.$secondary-heading-font-weight;
@@ -31,7 +31,7 @@ h5 { font-size: 1.4rem; };
 h6 { font-size: 1.2rem; };
 
 // General Text
-p, ol, ul, a, button, input, label {
+p, ol, ul, a, button, input, label, td {
     font-family: typography.$body-font-family, 
                  typography.$fallback-stack;
     font-weight: typography.$body-font-weight;

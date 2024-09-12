@@ -1,0 +1,26 @@
+{{ $works := dict }}
+{{ with resources.Get "data/cv.json" }}
+{{ with . | transform.Unmarshal }}
+    {{ $works = where .works "show" true }}
+    {{ with $works }}
+        <section class="cv-section cv-section__works">
+            <h2 class="cv-section__title">Selected Works</h2>
+            <table class="cv-table cv-table__works-list">
+                {{ range $works }}
+                    <tr>
+                        <td class="works-title">
+                            {{ .title }}
+                        </td>
+                        <td class="works-year">
+                            {{ .year }}
+                        </td>
+                        <td class="works-description">
+                            {{ .description }}
+                        </td>
+                    </tr>
+                {{ end }}
+            </table>
+        </section>
+    {{ end }}
+{{ end }}
+{{ end }}

@@ -7,7 +7,7 @@ Description: Style header element.
 // Package: rgibsonmusic
 @use 'abstracts/colours';
 
-header {
+header:not(.cv-header) {
     height: 4rem;
     background-color: var(--header-bg);
     display: flex;

@@ -1,5 +1,9 @@
 <a
-    href="{{ .Get "url" }}"
+    {{ if .Get "external" }}
+        href="{{ .Get "url" }}"
+    {{ else }}
+        href="{{ relURL (.Get "url") }}"
+    {{ end }}
     {{ if .Get "external" }}
         target="_blank"
         rel="noreferrer"

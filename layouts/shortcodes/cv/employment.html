@@ -1,0 +1,55 @@
+{{ $employment := dict }}
+{{ with resources.Get "data/cv.json" }}
+{{ with . | transform.Unmarshal }}
+    {{ $employment = where .employment "show" true }}
+    {{ with $employment }}
+        <section class="cv-section cv-section__employment">
+            <h2 class="cv-section__title">Recent Employment History</h2>
+                {{ range $employment }}
+                <div class="employment-element">
+                    <table class="cv-table cv-table__employment-element">
+                        <tr class="evenly-spaced-td">
+                            <td class="employment-role">
+                                {{ .role }}
+                            </td>
+                            <td class="employment-employer">
+                                {{ .employer }}
+                            </td>
+                            <td class="employment-date">
+                                {{ .start_date }} - {{ .end_date }}
+                            </td>
+                        </tr>
+                    </table>
+                    {{ if or .responsibilites .additional_info .modules }}
+                    <div class="employment-extra-notes">
+                        {{ if .responsibilities }}
+                            <div class="employment-responsibilities">
+                                <p>Responsibilities included:</p>
+                                <ul class="education-modules-list">
+                                    {{ range .responsibilities }}
+                                        <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                        {{ end }}
+                        {{ if .modules }}
+                            <div class="employment-modules">
+                                <p>Including modules:</p>
+                                <ul class="education-modules-list">
+                                    {{ range .modules }}
+                                        <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                        {{ end }}
+                        {{ if .additional_info }}
+                            <div><p>{{ .additional_info }}</p></div>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+                {{ end }}
+        </section>
+    {{ end }}
+{{ end }}
+{{ end }}
