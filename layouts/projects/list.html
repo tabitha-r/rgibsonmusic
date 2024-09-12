@@ -9,14 +9,25 @@
     <article>
         <div class="content-article">
             <h1>✏ Projects</h1>
-            <p>Rachael has been involved with a number of workshops, studies, and projects. Check out some of the interesting things she's been up to below.</p>
+            <p>Rachael has been involved with a number of workshops, studies, and projects. Click on an eye to check out some of the interesting things she's been up to below.</p>
         </div>
         <ul class="card-wrapper">
             {{ range .Pages }}
+                {{ $img := .Resources.Get "images/featured.webp" }}
                 <li class="project-card">
-                    <h2>{{ .Title }}</h2>
-                    <p>{{ .Description }}</p>
-                    <a href="{{ .RelPermalink }}">Go</a>
+                    <div class="info">
+                        <h2>{{ .Title }}</h2>
+                        <p>{{ .Description }}</p>
+                    </div>
+                    <a 
+                        href="{{ .RelPermalink }}"
+                        style="background-image: linear-gradient(-45deg, rgba(101, 210, 204, 0.75), rgba(222, 132, 193, 0.75), rgba(189, 203, 144, 0.75)), url({{ $img.RelPermalink }});"
+                    >
+                        <span class="label-wrapper">
+                            <i class="fa-regular fa-eye" aria-label="Read more about {{ .Title }}"></i>
+                            <span class="label">Read more</span>
+                        </span>
+                    </a>
                 </li>
             {{ end }}
         </ul>

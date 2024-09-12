@@ -78,16 +78,33 @@ main.projects {
             border: 3px solid var(--border);
             border-radius: 8px;
             margin: .5rem;
-            width: 300px;
-            height: 300px;
+            width: 550px;
+            height: 200px;
             background-color: var(--container-bg);
             overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row nowrap;
+
+            div.info {
+                height: 100%;
+                width: auto;
+                flex-grow: 3;
+
+                p {
+                    max-width: 20rem;
+                }
+            }
+
 
             h2 {
                 margin: 0;
                 padding: .2rem;
-                background-color: var(--default-red);
+                background-color: var(--default-teal);
                 border-bottom: 3px solid var(--border);
+                color: var(--default-black);
             }
 
             p {
@@ -96,12 +113,52 @@ main.projects {
             }
 
             a {
-                background-color: var(--default-teal);
-                position: relative;
-                margin: auto 0 0 auto;
-                display: block;
+                display: grid;
+                place-items: center;
                 text-align: center;
                 padding: .2rem;
+                height: 100%;
+                min-width: 6rem;
+                border-left: 3px solid var(--border);
+                transition: .2s ease;
+                color: var(--default-black);
+                font-size: 3rem;
+                font-weight: 700;
+
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                span.label-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-flow: column nowrap;
+                    border-radius: 5px;
+                    padding: .2rem;
+                    transition: .2s ease;
+                }
+
+                span.label {
+                    visibility: hidden;
+                    font-size: 1rem;
+                    margin: 0;
+                    white-space: nowrap;
+                    transition: .2s ease;
+                }
+
+                &:hover, &:focus, &:focus-within {
+                    min-width: 8rem;
+                    text-decoration: none;
+
+                    span.label-wrapper {
+                        background: rgba(255,255,255,0.45);
+                    }
+
+                    span.label {
+                        visibility: visible;
+                    }
+                }
             }
         }
     }
