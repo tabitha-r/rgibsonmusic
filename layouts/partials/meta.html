@@ -1,8 +1,4 @@
-{{ $img := print .Permalink "images/featured.webp" }}
-
-{{ if not (fileExists (print .RelPermalink "images/featured.webp")) }}
-    {{ $img = "/images/featured.webp" }}
-{{ end }} 
+{{ $img := (print .RelPermalink "images/featured.webp") }}
 
 {{ $description := .Description | default .Summary }}
 
