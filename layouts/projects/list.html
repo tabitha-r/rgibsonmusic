@@ -6,16 +6,20 @@
 
 {{ define "main" }}
 
-    <div class="content-article">
-        <h1>✏ Projects</h1>
-        <p>Rachael has been involved with a number of workshops, studies, and projects. Check out some of the interesting things she's been up to below.</p>
-        {{ range .Pages }}
-            <article>
-                <h2>{{ .Title }}</h2>
-                <p>{{ .Description }}</p>
-                <a href="{{ .RelPermalink }}">Go</a>
-            </article>
-        {{ end }}
-    </div>
+    <article>
+        <div class="content-article">
+            <h1>✏ Projects</h1>
+            <p>Rachael has been involved with a number of workshops, studies, and projects. Check out some of the interesting things she's been up to below.</p>
+        </div>
+        <ul class="card-wrapper">
+            {{ range .Pages }}
+                <li class="project-card">
+                    <h2>{{ .Title }}</h2>
+                    <p>{{ .Description }}</p>
+                    <a href="{{ .RelPermalink }}">Go</a>
+                </li>
+            {{ end }}
+        </ul>
+    </article>
 
 {{ end }}

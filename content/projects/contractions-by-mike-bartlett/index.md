@@ -1,7 +1,7 @@
 +++
 title = 'Contractions by Mike Bartlett'
 date = 2024-09-11T15:47:32+01:00
-description = 'Original Music for Whatstick Theatre’s production of Contractions, written by Mike Bartlett'
+description = 'Original Music for Whatstick Theatre’s production of Contractions'
 type = 'projects'
 [params]
     page_class = 'project'

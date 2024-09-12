@@ -100,7 +100,7 @@ Included under the FontAwesome Free License for FontAwesome icons 6.5.0 https://
 };
 
 html {
-    background-color: var(--main-bg);
+    background-color: var(--header-bg);
     transition: .2s ease;
     color: var(--main-font);
     height: 100%;
@@ -122,3 +122,23 @@ html {
 .skip-to-content-link:focus {
   	transform: translateY(0%);
 };
+
+div.draft-warning {
+    background-color: var(--default-red);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    padding: .4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+
+    p {
+        margin: .2rem;
+    }
+
+    &__hidden {
+        display: none;
+    }
+}
