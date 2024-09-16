@@ -243,3 +243,93 @@ main.projects {
         }
     }
 }
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    main.projects {
+        ul.card-wrapper {
+            li.project-card {
+                flex-flow: column nowrap;
+                width: 90vw;
+                height: fit-content;
+
+                div.info {
+                    width: 100%;
+                    height: fit-content;
+                    h2 { 
+                        font-size: 18px; 
+                        background-color: white;
+                        border: none;
+                    }
+                    p { 
+                        font-size: 16px; 
+                    }
+                }
+                &>a {
+                    width: 100%;
+                    font-size: 16px;
+                    background-image: none;
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    span.label-wrapper { 
+                        flex-flow: row nowrap;
+                    }
+
+                    span.label {
+                        display: block;
+                        font-size: 16px;
+                        visibility: visible;
+                    }
+
+                    &:after {
+                        content: '(' attr(href) ')';
+                    }
+                }
+            }
+        }
+    }
+
+    main.project {
+        div.title {
+            padding: 0;
+            margin: 3px;
+            h1 {
+                font-size: 26px;
+                -webkit-text-stroke-width: 0px;
+                color: black;
+                margin: 0;
+            }
+        }
+
+        section {
+            figure:not(.iframe-figure):not(.gallery-figure) {
+
+                img {
+                    max-width: 300px;
+                    max-height: 500px;
+                    width: auto;
+                    height: auto;
+                    
+                }
+            }
+
+            div.soundcloud-src {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: row wrap;
+                a {
+                    color: black;
+                }
+            }
+        }
+
+        div.projects-navigation {
+            display: none;
+        }
+    }
+}

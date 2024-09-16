@@ -87,3 +87,21 @@ header svg.RGLogo {
         fill: var(--gibson-fill);
     };
 };
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    .RGLogo {
+        --logo-outline: transparent;
+        --rachael-fill: black;
+        --gibson-fill: black;
+        --neck-fill: black;
+    }   
+    header svg.RGLogo {
+        --logo-outline: transparent;
+        --rachael-fill: black;
+        --gibson-fill: black;
+        --neck-fill: black;
+        filter: none;
+    }
+}

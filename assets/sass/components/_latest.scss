@@ -55,3 +55,52 @@ div.latest {
         }
     }
 };
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    div.latest {
+        box-shadow: none;
+        background: none;
+        padding: 0;
+        margin: 6px 0;
+
+        h2 {
+            margin: 0;
+        }
+
+        ul.latest-wrapper {
+            flex-flow: column nowrap;
+
+            li.latest-card {
+                width: 95%;
+
+                h3 {
+                    color: black;
+                }
+
+                p {
+                    margin: 3px;
+                }
+
+                a[target="_blank"]:after {
+                    content: '(' attr(href) ')';
+                }
+
+                div.details {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    flex-flow: row nowrap;
+                }
+
+                a.button {
+                    font-size: 16px;
+                    padding: 3px 6px;
+                    border-width: 1px;
+                    background-color: white;
+                }
+            }
+        }
+    }
+}

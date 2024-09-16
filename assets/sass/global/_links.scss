@@ -33,3 +33,11 @@ a {
         transition: .2s ease;
     };
 }
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    a[target="_blank"]:after {
+        content: '(' attr(href) ')';
+    }
+}

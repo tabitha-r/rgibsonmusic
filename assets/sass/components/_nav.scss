@@ -214,3 +214,11 @@ nav.main-nav__mobile {
         }
     }
 }
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    nav.main-nav {
+        display: none;
+    }
+}

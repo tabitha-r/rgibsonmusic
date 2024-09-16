@@ -109,3 +109,18 @@ header:not(.cv-header) {
         }
     }
 }
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    body.page__ header:not(.cv-header) {
+        display: none;
+    }
+    header:not(.cv-header) {
+        width: 100%;
+
+        div.controls {
+            display: none;
+        }
+    }
+}

@@ -19,6 +19,7 @@
                             <h3>{{ .title }}</h3>
                             <p>{{ .description }}</p>
 
+                            <div class="details">
                             {{ if .date }}
                                 {{ $d := time.AsTime .date }}
                                 <p><i class="fa-regular fa-fw fa-calendar-days" aria-label="Date"></i> {{ time.Format "2 January 2006" $d }}</p>
@@ -44,7 +45,7 @@
                                     {{ end }}
                                 </p>
                             {{ end }}
-
+                            </div>
                             {{ if .link }}
                                 <a 
                                     class="button button__teal"

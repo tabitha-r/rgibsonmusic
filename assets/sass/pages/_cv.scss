@@ -162,6 +162,42 @@ body.page__cv {
     }
 }
 
+/* Mobile Responsiveness
+--------------------------------------------- */
+@media only screen and (max-width: 700px) {
+    body.page__cv section.cv-section__employment div.employment-element table.cv-table tr.evenly-spaced-td td {
+        width: 100%;
+    }
+    body.page__cv {
+        section.cv-section {
+            table.cv-table {
+                tr {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-flow: column nowrap;
+                    padding: .4rem;
+
+                    td {
+                        width: 100%;
+                        padding: .2rem;
+
+                        &:first-of-type {
+                            font-weight: 700;
+                        }
+
+                        &:nth-of-type(2) {
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Print
+--------------------------------------------- */
 @media only print {
     body.page__cv {
 
@@ -300,7 +336,7 @@ body.page__cv {
                     margin: 0 0 0 6px;
                 }
 
-                tr.evenly-spacd-td {
+                tr.evenly-spaced-td {
                     td {
                         width: fit-content;
                     }

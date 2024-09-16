@@ -81,3 +81,27 @@ div.design-sidebar {
         display: none;
     }
 }
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "content";
+        overflow: visible !important;
+    }
+
+    div.design-sidebar {
+        display: none;
+    }
+
+    div#content-wrapper {
+        margin: 0;
+        margin-top: 4rem;
+        overflow: visible;
+    }
+    div#content-wrapper main:not(.homepage) article.content-article, div#content-wrapper main:not(.homepage) div.content-article {
+        max-width: 100vw;
+
+    }
+}

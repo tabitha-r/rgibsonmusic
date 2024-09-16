@@ -164,3 +164,63 @@ main.compositions {
         }
     }
 }
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    main.compositions {
+        ul.cards-wrapper {
+
+            li.composition-card {
+
+                grid-template-columns: none;
+                grid-template-areas: 
+                    "identifier"
+                    "info"
+                    "link";
+
+                div {
+                    padding: 3px;
+                }
+
+                div.works-identifier {
+                    grid-area: identifier;
+                }
+
+                div.info {
+                    border: none;
+                    overflow-wrap: break-word;
+                }
+
+                &:not(.composition-card__with-embed) {
+                    div.info {
+                        grid-area: info;
+                    };
+                };
+    
+                &__with-embed {
+                    div.embed {
+                        grid-area: link;
+                        border: none;
+
+                        iframe.composition-embed-soundcloud {
+                            display: none;
+                        }
+
+                        a[href^="/"] {
+                            display: none;
+                        }
+                    };
+    
+                    div.info {
+                        grid-area: info;
+                    }
+                };
+
+            }
+        }
+    }
+    main.compositions ul.cards-wrapper li.composition-card div.info h2, main.compositions ul.cards-wrapper li.composition-card div.info p {
+        font-size: 16px;
+    }
+}

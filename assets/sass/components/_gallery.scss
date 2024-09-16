@@ -53,3 +53,27 @@ ul.gallery {
         }
     }
 }
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    ul.gallery {
+        li.gallery-item {
+            figure.gallery-figure {
+                margin: 3px;
+                padding: 0;
+                img.gallery-img {
+                    max-width: 250px;
+                    max-height: 250px;
+                    height: auto;
+                    width: auto;
+                }
+                figcaption {
+                    display: block;
+                    color: black;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

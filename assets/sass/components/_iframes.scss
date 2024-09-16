@@ -25,3 +25,21 @@ figure.iframe-figure {
     padding: 0;
     width: min-content;
 }
+
+div.iframe-src {
+    display: none;
+}
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    iframe, figure.iframe-figure iframe, iframe.full-page-soundcloud {
+        height: 100px;
+    }
+
+    div.iframe-src {
+        display: block;
+        width: 90vw;
+        overflow-wrap: break-word;
+    }
+}

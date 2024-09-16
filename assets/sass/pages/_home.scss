@@ -204,3 +204,51 @@ main.homepage {
         }
     }
 }
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    main.homepage {
+        div.homepage-textbox {
+            max-width: 100vw;
+            padding: 0;
+
+            h2 {
+                margin: 6px;
+            }
+
+            a.button {
+                display: none;
+            }
+        }
+        div.hero {
+            height: fit-content;
+
+            h1 {
+                height: fit-content;
+                width: auto;
+                margin: 12px;
+
+                svg.RGLogo {
+                    height: 100px;
+                    width: auto;
+                }
+            }
+
+            ul.title-scroller {
+                margin: 12px;
+                li {
+                    font-size: 18px;
+
+                    &.smaller-text {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            a.button {
+                display: none;
+            }
+        }
+    }
+}

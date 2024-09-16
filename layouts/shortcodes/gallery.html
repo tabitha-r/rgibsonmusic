@@ -4,9 +4,9 @@
         {{ $src := index $arg 0 }}
         {{ $caption := index $arg 1 }}
         {{ $alt := index $arg 2 }}
-        <li>
-            <figure>
-                <img src="{{ $src }}" alt="{{ $alt }}" />
+        <li class="gallery-item">
+            <figure class="gallery-figure">
+                <img class="gallery-image" src="{{ $src }}" alt="{{ $alt }}" />
                 <figcaption>{{ $caption }}</figcaption>
             </figure>
         </li>
