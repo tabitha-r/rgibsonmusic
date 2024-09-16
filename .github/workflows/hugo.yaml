@@ -59,7 +59,8 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "https://www.tabithariley.co.uk/rgibsonmusic/"          
+            --baseURL "${{ steps.pages.outputs.base_url }}/" 
+            --environment "staging"         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
