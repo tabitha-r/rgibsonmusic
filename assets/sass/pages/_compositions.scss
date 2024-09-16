@@ -100,8 +100,66 @@ main.compositions {
                 }
 
                 a.composition-link-button {
-                    background-color: var(--default-red);
+                    background-color: var(--default-teal);
+                    color: black;
+                    transition: .2s ease;
+
+                    &:hover, &:focus, &:focus-within {
+                        background-color: var(--default-blue);
+                    }
                 }
+            }
+        }
+    }
+}
+
+/* Mobile Responsiveness
+--------------------------------------------- */
+@media only screen and (max-width: 900px) {
+    body.page__compositions div#content-wrapper main:not(.homepage) article.content-article {
+        max-width: 90vw;
+    }
+    main.compositions {
+        article.content-article {
+
+            section.list-info {
+                max-width: 80vw;
+                margin: 1rem auto;
+            }
+        }
+        ul.cards-wrapper {
+            width: 90vw;
+        }
+    }
+}
+@media only screen and (max-width: 650px) {
+    main.compositions {
+        ul.cards-wrapper {
+            li.composition-card {
+                grid-template-columns: none;
+                grid-template-areas: 
+                    "identifier info"
+                    "identifier link";
+
+                div.works-identifier {
+                    grid-area: identifier;
+                }
+
+                &:not(.composition-card__with-embed) {
+                    div.info {
+                        grid-area: info;
+                    };
+                };
+
+                &__with-embed {
+                    div.embed {
+                        grid-area: link;
+                    };
+    
+                    div.info {
+                        grid-area: info;
+                    }
+                };
             }
         }
     }

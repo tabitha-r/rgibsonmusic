@@ -5,6 +5,7 @@ year = 2014
 description = 'musical score for short documentary, as part of DaDaFest, directed by Hannah Cross'
 work_type = 'Film/Theatre/Installation'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

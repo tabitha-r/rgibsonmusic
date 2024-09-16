@@ -5,6 +5,7 @@ year = 2019
 description = 'acousmatic piece'
 work_type = 'Chamber/Solo Artist/Electronic'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

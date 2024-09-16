@@ -80,6 +80,88 @@ body.page__cv {
     }
 }
 
+@media only screen {
+    body.page__cv {
+        section.cv-section {
+            &__works, &__residencies, &__education {
+                table.cv-table {
+                    border: 3px solid var(--border);
+                    border-radius: 8px;
+                    overflow: hidden;
+                    margin: .4rem;
+    
+                    tr:nth-of-type(2n) {
+                        background-color: var(--default-blue);
+                        color: black;
+                    }
+                    tr {
+                        border: none;
+                        margin: 0;
+                        td {
+                            text-align: center;
+                            padding: .8rem 1.2rem;
+                            margin: 0;
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            ul {
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: row wrap;
+                padding: 0;
+                margin: .2rem;
+
+                li {
+                    margin-left: .4rem;
+                
+                    &:not(:last-child):after {
+                        content: "•";
+                        margin-left: .4rem;
+                    }
+                }
+            }
+
+            &__employment {
+                div.employment-element {
+                    border: 3px solid var(--border);
+                    border-radius: 8px;
+                    padding: .4rem .8rem;
+                    margin: .4rem;
+
+                    p {
+                        margin: .2rem;
+                    }
+
+                    table.cv-table {
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        background-color: var(--default-blue);
+                        color: black;
+
+                        tr.evenly-spaced-td {
+                            td {
+                                width: 30%;
+                            }
+                        }
+
+                        td {
+                            padding: .2rem .4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media only print {
     body.page__cv {
 
@@ -128,9 +210,17 @@ body.page__cv {
 
         footer.cv-footer {
             display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row nowrap;
+            padding: 1rem 2rem;
 
             path#qr {
                 fill: #000 !important;
+            }
+
+            p {
+                text-align: center;
             }
         }
         

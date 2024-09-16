@@ -56,3 +56,28 @@ div.design-sidebar {
     background-size: cover;
     box-shadow: inset 0px 0px 10px black;
 };
+
+/* Mobile Responsiveness
+--------------------------------------------- */
+@media only screen and (max-width: 1300px) {
+    body {
+        div#content-wrapper {
+            main:not(.homepage) {
+                article.content-article, div.content-article {
+                    max-width: 80vw;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "content";
+    }
+
+    div.design-sidebar {
+        display: none;
+    }
+}

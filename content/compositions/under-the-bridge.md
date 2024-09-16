@@ -5,6 +5,7 @@ year = 2017
 description = 'musical score for short film, directed by Cait Milner'
 work_type = 'Film/Theatre/Installation'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

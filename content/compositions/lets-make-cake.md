@@ -5,6 +5,7 @@ year = 2015
 description = 'musical score for short film, created by Ellen Stott and Lorna Gibson'
 work_type = 'Film/Theatre/Installation'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

@@ -7,6 +7,7 @@ embed_type = 'internal'
 link = '/projects/feedback-piano/'
 work_type = 'Chamber/Solo Artist/Electronic'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

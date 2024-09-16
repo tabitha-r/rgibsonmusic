@@ -13,8 +13,6 @@
             <p>Each composition is identified as either part of Rachael's <span class="works-identifier works-identifier__solo"><span class="works-identifier__icon">🎵</span> Chamber, Solo Artist, and Electronic Works</span> or <span class="works-identifier works-identifier__soundtrack"><span class="works-identifier__icon">🎞</span> Film, Theatre, and Installation Works</span>.</p>
         </section>
 
-        {{/*  {{ $paginator := .Paginate ( where (where (where (where .Site.Pages "Type" "!=" "home") "Description" "!=" "") "Type" "!=" "authors") "Type" "!=" "tags") 20 }}  */}}
-
         <ul class="cards-wrapper">
             {{ range sort .Pages ".Params.year" "desc" }}
                     {{ partial "composition-card" (dict "page" .) }}
@@ -22,8 +20,6 @@
         </ul>
 
     </article>
-
-    {{/*  {{ template "_internal/pagination.html" . }}  */}}
 
 {{ end }}
 
@@ -58,7 +54,7 @@
 
         <div class="info">
             <h2>{{ .page.Title }}</h2>
-            <p><span class="composition-date">({{ .page.Params.year }})</span>, {{ .page.Description }}</p>
+            <p><span class="composition-date">({{ if eq .page.Params.in_progress true}}In Progress{{ else }}{{ .page.Params.year }}{{ end }})</span>, {{ .page.Description }}</p>
         </div>
 
         {{ if .page.Params.embed_type }}

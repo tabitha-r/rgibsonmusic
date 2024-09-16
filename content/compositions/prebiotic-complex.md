@@ -5,4 +5,5 @@ year = 2024
 description = 'for the House of Bedlam featuring video score, live visuals and amplified instruments, Aldeburgh Festival 2024 (As part of BPYA programme)'
 work_type = 'Chamber/Solo Artist/Electronic'
 type = 'compositions'
+in_progress = false
 +++

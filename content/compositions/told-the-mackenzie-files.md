@@ -7,6 +7,7 @@ embed_type = 'learn-link'
 link = 'https://www.everymanplayhouse.com/whats-on/told-the-mackenzie-files'
 work_type = 'Film/Theatre/Installation'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

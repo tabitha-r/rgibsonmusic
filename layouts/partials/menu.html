@@ -3,7 +3,7 @@
 
 {{- with index site.Menus $menuID }}
 
-  <nav>
+  <nav id="main-nav" class="main-nav main-nav__desktop">
     <ul>
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
@@ -26,6 +26,9 @@
     {{- end }}
 
     {{- $name := .Name }}
+    
+    {{- $ariaLabel := (print "Go to " $name)}}
+    {{- $attrs = merge $attrs (dict "aria-label" $ariaLabel)}}
 
     {{- with .Identifier }}
       {{- with T . }}
@@ -41,7 +44,7 @@
               {{- end }}
             {{- end -}}
         >
-            {{ .Pre }}{{ $name }}
+            <span class="nav-link-label nav-link-label__icon">{{ .Pre }}</span><span class="nav-link-label nav-link-label__text"> {{ $name }}</span>
         </a>
       
         {{- with .Children }}

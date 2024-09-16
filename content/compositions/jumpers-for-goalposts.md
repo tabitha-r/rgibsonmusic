@@ -7,6 +7,7 @@ embed_type = 'learn-link'
 link = 'https://www.facebook.com/JumpersShortFilm/?paipv=0&eav=AfaSNTcWmFEQLHWQHegZUIXl3JDIOhfmVtRt3Tp5Q5R29VDY-12pgJlclleNgwY-gaQ&_rdr'
 work_type = 'Film/Theatre/Installation'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

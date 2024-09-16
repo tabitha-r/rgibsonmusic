@@ -28,6 +28,7 @@ export function detectTheme() {
                 // Set identifier icon
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
+                icon.ariaLabel = 'Current theme is dark';
                 // Save preference to local storage
                 localStorage.setItem('theme', 'dark');
             } else {
@@ -43,6 +44,7 @@ export function detectTheme() {
             // Set identifier icon
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
+            icon.ariaLabel = 'Current theme is dark';
         };
 
         // Don't need to handle preference 'light' saved as light theme is default
@@ -69,6 +71,7 @@ export function toggleTheme() {
             // Set identifier icon
             icon.classList.remove('fa-sun');
             icon.classList.add('fa-moon');
+            icon.ariaLabel = 'Current theme is light';
             // Save preference to local storage
             localStorage.setItem('theme', 'light');
         } else {
@@ -79,6 +82,7 @@ export function toggleTheme() {
             // Set identifier icon
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
+            icon.ariaLabel = 'Current theme is dark';
             // Save preference to local storage
             localStorage.setItem('theme', 'dark');
         };

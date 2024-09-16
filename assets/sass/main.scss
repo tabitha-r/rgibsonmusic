@@ -82,6 +82,7 @@ Included under the FontAwesome Free License for FontAwesome icons 6.5.0 https://
 @use 'components/socials';
 @use 'components/latest';
 @use 'components/gallery';
+@use 'components/iframes';
 
 /*--------------------------------------------------------------
 # Base
@@ -134,6 +135,7 @@ div.draft-warning {
     align-items: center;
     justify-content: space-between;
     flex-flow: row nowrap;
+    border-radius: 8px;
 
     p {
         margin: .2rem;

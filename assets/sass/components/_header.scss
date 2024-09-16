@@ -22,40 +22,90 @@ header:not(.cv-header) {
 
     border-bottom: 3px solid colours.$graffiti_black;
 
-    &>a {
+    a.header-logo {
         margin: 1rem;
     }
 
-    button#toggle-colour-scheme {
-        background: transparent;
-        border: none;
-        transition: .2s ease;
-        border-radius: 50%;
-        padding: auto;
-        width: 2rem;
-        height: 2rem;
-        margin: 1rem;
+    div.controls {
+        padding: .4rem;
+        margin-right: 1rem;
 
-        i.fa-regular {
+        button.control-button {
+            background: transparent;
+            border: none;
             transition: .2s ease;
-            color: var(--main-font);
-        };
-
-        &:hover, &:focus {
-            cursor: pointer;
-            background: var(--subtle-button-hover);
-            i.fa-regular {
-                color: var(--colour-scheme-hover);
-                filter: drop-shadow(0px 0px 3px var(--colour-scheme-hover-shadow));
+            border-radius: 50%;
+            padding: .2rem;
+            width: 2rem;
+            height: 2rem;
+            margin: .2rem;
+    
+            i.fa-regular, i.fa-solid {
+                transition: .2s ease;
+                color: var(--main-font);
             };
-        };
 
-        &:disabled {
-            background: var(--subtle-button-disabled);
-        };
-
-        &:active {
-            background: var(--subtle-button-active);
+            &__active {
+                background-color: var(--default-red);
+                i.fa-regular, i.fa-solid {
+                    color: black;
+                }
+    
+                &:hover, &:focus, &:focus-within {
+                    cursor: pointer;
+                    background: var(--default-orange);
+                };
+            }
+    
+            &#toggle-colour-scheme:hover, 
+            &#toggle-colour-scheme:focus,
+            &#toggle-colour-scheme:focus-within {
+                i.fa-regular {
+                    color: var(--colour-scheme-hover);
+                    filter: drop-shadow(0px 0px 3px var(--colour-scheme-hover-shadow));
+                };
+            }
+    
+            &:not(.control-button__active) {
+                &:hover, &:focus, &:focus-within {
+                    cursor: pointer;
+                    background: var(--subtle-button-hover);
+                };
+            }
+    
+            &:disabled {
+                background: var(--subtle-button-disabled);
+            };
+    
+            &:active {
+                background: var(--subtle-button-active);
+            }
         }
     }
+
 };
+
+/* Mobile Responsiveness
+--------------------------------------------- */
+@media only screen and (max-width: 1100px) {
+    header:not(.cv-header) {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    header:not(.cv-header) div.controls button#mobile-menu-button {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    header:not(.cv-header) {
+        a.header-logo {
+            visibility: collapse;
+        }
+        div.controls {
+            margin-left: auto;
+        }
+    }
+}

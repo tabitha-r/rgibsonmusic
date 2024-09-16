@@ -7,7 +7,7 @@
 {{ define "main"}}
 
     <article class="content-article">
-        <h1>{{ .Title }} ({{ .Params.year }})</h1>
+        <h1>{{ .Title }} ({{ if eq .Params.in_progress true}}In Progress{{ else }}{{ .Params.year }}{{ end }})</h1>
         <p>{{ .Description }}</p>
 
         {{ if .Params.embed_type }}

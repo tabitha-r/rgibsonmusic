@@ -9,6 +9,7 @@ user_link = 'https://soundcloud.com/rgibsonmusic'
 username = 'Rachael Gibson'
 work_type = 'Chamber/Solo Artist/Electronic'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

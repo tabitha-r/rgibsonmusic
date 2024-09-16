@@ -1,9 +1,3 @@
-
-<div id="draft-warning-notice" class="draft-warning">
-    <p>🚧 This site is a <strong>Work in Progress Draft</strong>.<br/> Not all features and styling are implemented</p>
-    <button id="hide-notice" class="button button__green"> <i class="fa-regular fa-circle-xmark" role="presentation"></i> Hide this notice</button>
-</div>
-
 <header class="main-header">
     
     <a 
@@ -11,6 +5,8 @@
         aria-label="Go to homepage" 
         {{ if .IsHome }}
             class="homepage-header-logo"
+        {{ else }}
+            class="header-logo"
         {{ end }}
     >
         {{ partial "logo_text.svg" }}
@@ -19,6 +15,7 @@
     {{ partial "menu" (dict "menuID" "main" "page" .) }}
 
     <div class="controls">
-        <button id="toggle-colour-scheme" aria-label="Toggle colour scheme"><i id="theme-identifier-icon" class="fa-regular fa-moon" aria-label="Current theme is light"></i></button>
+        <button class="control-button" id="toggle-colour-scheme" aria-label="Toggle colour scheme"><i id="theme-identifier-icon" class="fa-regular fa-moon" aria-label="Current theme is light"></i></button>
+        <button class="control-button" id="mobile-menu-button" aria-label="Navigation Menu"><i id="mobile-nav-identifier-icon" class="fa-solid fa-bars"></i></button>
     </div>
 </header>

@@ -5,6 +5,7 @@ year = 2018
 description = 'musical score for documentary, directed by Tom Griffiths'
 work_type = 'Film/Theatre/Installation'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

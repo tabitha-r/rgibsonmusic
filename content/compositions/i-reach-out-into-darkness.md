@@ -7,6 +7,7 @@ embed_type = 'internal'
 link = '/projects/i-reach-out-into-darkness/'
 work_type = 'Chamber/Solo Artist/Electronic'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

@@ -5,6 +5,7 @@ year = 2018
 description = 'for woodwind and electronic sounds'
 work_type = 'Chamber/Solo Artist/Electronic'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

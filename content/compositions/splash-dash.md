@@ -5,6 +5,7 @@ year = 2016
 description = 'musical score for advertisement, Claire House Children’s Hospice'
 work_type = 'Film/Theatre/Installation'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

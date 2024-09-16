@@ -9,6 +9,7 @@ user_link = 'https://soundcloud.com/user-535990427-913579998'
 username = 'RMG96'
 work_type = 'Chamber/Solo Artist/Electronic'
 type = 'compositions'
+in_progress = false
 [params]
     page_class = 'composition'
 +++

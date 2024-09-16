@@ -13,10 +13,11 @@ div.latest {
     margin: 0;
     width: 100%;
     height: fit-content;
-    padding: 1rem 2rem;
     box-shadow: inset 0px 0px 8px var(--shadow);
+    padding: .8rem 0;
 
     h2 {
+        margin: 1rem 1.4rem;
         color: black;
     }
 
@@ -27,20 +28,23 @@ div.latest {
         flex-flow: row wrap;
         list-style-type: none;
         height: fit-content;
+        margin: 0;
+        padding: 1rem;
 
         li.latest-card {
-            width: 300px;
+            width: 280px;
             height: 100%;
             border: 3px solid var(--border);
             border-radius: 8px;
             padding: .6rem 1rem;
             box-shadow: 2px 2px 5px var(--shadow);
             background-color: var(--container-bg);
+            margin: .8rem;
 
             h3 {
                 padding: 0;
                 margin: .2rem;
-                color: #de84c1;
+                color: var(--default-pink);
                 font-weight: 700;
             }
 

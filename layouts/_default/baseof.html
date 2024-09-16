@@ -29,14 +29,19 @@
         
     <div id="content-wrapper">
 
+        
         {{ block "header" . }}
-            
+        
         {{ end }}
 
         {{ if .Page.IsHome }}
             <main id="main-wrapper" class="homepage" aria-role="main">
         {{ else }}
             <main id="main-wrapper" class="{{ .Params.page_class }}" aria-role="main">
+        {{ end }}
+        
+        {{ if .Site.Param "show_draft_notice" }}
+            {{ partial "draft" }}
         {{ end }}
             
             

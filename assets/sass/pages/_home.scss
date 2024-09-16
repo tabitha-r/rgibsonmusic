@@ -71,7 +71,7 @@ main.homepage {
     }
 }
 
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion), only print {
     main.homepage {
         div.hero ul.title-scroller {
             animation: none;
@@ -150,5 +150,57 @@ main.homepage {
     100% {
         transform: translateY(4rem);
         opacity: 0%;
+    }
+}
+
+/* Mobile Responsiveness
+--------------------------------------------- */
+@media only screen and (max-width: 1400px) {
+    main.homepage {
+        div.hero {
+            height: fit-content;
+
+            h1 {
+                width: 80%;
+                height: fit-content;
+                padding: 0;
+                margin: 0;
+
+                svg {
+                    margin: 1rem auto;
+                    min-width: 280px;
+                }
+            }
+
+            &>a.button {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    main.homepage {
+        div.homepage-textbox {
+            max-width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    main.homepage {
+        div.hero {
+
+            ul.title-scroller {
+                li {
+                    font-size: 1.4rem;
+
+                    &.smaller-text {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+        }
     }
 }
