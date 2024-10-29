@@ -11,6 +11,7 @@ import { detectTheme, toggleTheme } from './changeTheme';
 import { hideNotice } from './hideNotice';
 import { handlePrint } from './print';
 import { determineNavType, toggleNav } from './mobileNav';
+import { nextGalleryImage, prevGalleryImage } from './gallery';
 
 // Upon load:
 // Check for saved theme
@@ -54,3 +55,13 @@ if (printButton) {
     // Add print function event listener
     printButton.addEventListener('click', handlePrint);
 };
+
+// Target galleries
+const galleryNextButtons = document.querySelectorAll('.gallery-control-button__next-img');
+galleryNextButtons.forEach((button) => {
+    button.addEventListener('click', nextGalleryImage);
+});
+const galleryPrevButtons = document.querySelectorAll('.gallery-control-button__prev-img');
+galleryPrevButtons.forEach((button) => {
+    button.addEventListener('click', prevGalleryImage);
+});

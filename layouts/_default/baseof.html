@@ -59,7 +59,8 @@
 
     </div>
     
-    {{ $js := resources.Get "ts/main.ts" | js.Build }}
+    {{ $jsOpts := dict "target" "es2020" }}
+    {{ $js := resources.Get "ts/main.ts" | js.Build $jsOpts }}
     <script src="{{ $js.RelPermalink }}" defer></script>
 </body>
 </html>

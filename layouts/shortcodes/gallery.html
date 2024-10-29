@@ -1,14 +1,40 @@
-<ul class="gallery">
-    {{ range .Params }}
-        {{ $arg := split . ":" }}
-        {{ $src := index $arg 0 }}
-        {{ $caption := index $arg 1 }}
-        {{ $alt := index $arg 2 }}
-        <li class="gallery-item">
-            <figure class="gallery-figure">
-                <img class="gallery-image" src="{{ $src }}" alt="{{ $alt }}" />
-                <figcaption>{{ $caption }}</figcaption>
-            </figure>
-        </li>
-    {{ end }}
-</ul>
+{{ $identifier := (print "gallery__" (.Get "id"))}}
+
+<div id="{{ $identifier }}" class="gallery-wrapper gallery-wrapper__start">
+
+    <button id="{{ $identifier }}__prev-img" class="button button__blue  gallery-control-button gallery-control-button__prev-img">
+        {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "solid" "faName" "chevron-left" "alt" "View Previous Images" "faAdditional" "fa-fw" "id" (print $identifier "__prev-img-icon")) }}
+    </button>
+
+    {{ $items := split (.Get "items") "::" }}
+
+    <div class="gallery">
+
+        <ul id="{{ $identifier }}__list" class="gallery-list gallery-list__start" data-length="{{ sub ($items | len) 1 }}" data-position="0" data-base-width="500">
+
+            {{ range $idx, $item := $items }}
+
+                {{ $itemId := (print $identifier (print "__item-" $idx))}}
+                {{ $arg := split $item ":" }}
+                {{ $src := index $arg 0 }}
+                {{ $caption := index $arg 1 }}
+                {{ $alt := index $arg 2 }}
+
+                <li class="gallery-item" id="{{ $itemId }}">
+                    <figure id="{{ $itemId }}__figure" class="gallery-figure">
+                        <img id="{{ $itemId }}__image" class="gallery-image" src="{{ $src }}" alt="{{ $alt }}" />
+                        <figcaption id="{{ $itemId }}__caption" class="gallery-caption">{{ $caption }}</figcaption>
+                    </figure>
+                </li>
+
+            {{ end }}
+
+        </ul>
+
+    </div>
+
+    <button id="{{ $identifier }}__prev-img" class="button button__blue gallery-control-button gallery-control-button__next-img">
+        {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "solid" "faName" "chevron-right" "alt" "View Next Images" "faAdditional" "fa-fw" "id" (print $identifier "__next-img-icon")) }}
+    </button>
+
+</div>

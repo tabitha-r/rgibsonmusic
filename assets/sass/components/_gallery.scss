@@ -6,58 +6,95 @@ Description: Styling the repeating image gallery shortcode element
 
 // Package: rgibsonmusic
 
-ul.gallery {
-    list-style-type: none;
+div.gallery-wrapper {
+    --widthBase: 500px;
+    --length: attr(data-length);
+    --position: attr(data-position);
+
+    max-width: 100%;
+    height: fit-content;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
-    z-index: 100;
-    min-height: 500px;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
 
-    li {
-        margin: .2rem;
-        position: relative;
-
-        figure {
-            transition: .2s ease;
-            border-radius: 8px;
-            img {
-                width: 200px;
-                height: auto;
-                transition: .2s ease;
-            }
-            figcaption {
-                display: none;
-                color: white;
-                font-size: 1rem;
-            }
+    &__start {
+        button.gallery-control-button__prev-img {
+            visibility: collapse;
         }
+    }
+    &__end {
+        button.gallery-control-button__next-img {
+            visibility: collapse;
+        }
+    }
+
+    button.gallery-control-button {
 
         &:hover, &:focus, &:focus-within {
-            z-index: 100;
+            cursor: pointer;
+        }
+    }
 
-            figure {
-                img {
-                    scale: 250%;
-                }
-                figcaption {
-                    display: block;
-                    transform: translateY(5.5rem);
-                    background-color: var(--container-bg);
-                    padding: .2rem;
-                    border-radius: 5px;
-                    color: var(--main-font);
+    div.gallery {
+        width: calc(var(--widthBase) * 0.9);
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+
+        ul.gallery-list {
+            list-style-type: none;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            flex-flow: row nowrap;
+            transition: .2s ease;
+            width: calc(var(--length) * var(--widthBase));
+            margin: 0;
+            padding: 0;
+        
+            li {
+                margin: 0;
+                padding: 0;
+                // position: relative;
+                height: auto;
+                width: var(--widthBase);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: column nowrap;
+        
+                figure {
+                    transition: .2s ease;
+                    border-radius: 8px;
+                    width: calc(var(--widthBase) * 0.8);
+                    img {
+                        width: 100%;
+                        height: auto;
+                        transition: .2s ease;
+                    }
+                    figcaption {
+                        display: block;
+                        background-color: var(--container-bg);
+                        padding: .2rem;
+                        border-radius: 5px;
+                        color: var(--main-font);
+                    }
                 }
             }
         }
     }
 }
 
+
 /* Print
 --------------------------------------------- */
 @media only print {
-    ul.gallery {
+    div.gallery {
+        width: auto;
+        height: auto;
+    }
+    ul.gallery-list {
         li.gallery-item {
             figure.gallery-figure {
                 margin: 3px;
@@ -72,6 +109,34 @@ ul.gallery {
                     display: block;
                     color: black;
                     font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    div.gallery-wrapper {
+        button.gallery-control-button {
+            display: none;
+        }
+        div.gallery {
+            width: 100%;
+            height: fit-content;
+            overflow-x: scroll;
+            
+            ul.gallery-list {
+                li.gallery-item {
+                    figure.gallery-figure {
+                        margin: 3px;
+                        padding: 0;
+                        img.gallery-img {
+                            max-width: 250px;
+                            max-height: 250px;
+                            height: auto;
+                            width: auto;
+                        }
+                    }
                 }
             }
         }

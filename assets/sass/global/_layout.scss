@@ -75,6 +75,15 @@ div.design-sidebar {
     body {
         grid-template-columns: 1fr;
         grid-template-areas: "content";
+
+        div#content-wrapper {
+            main:not(.homepage) {
+                margin: 0;
+                article.content-article, div.content-article {
+                    max-width: 95vw;
+                }
+            }
+        }
     }
 
     div.design-sidebar {
