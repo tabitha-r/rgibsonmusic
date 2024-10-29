@@ -108,7 +108,7 @@ Basic information like contact details, social media accounts, CV points, and up
 
 JSON files are set up as a collection of `"key": "value"` pairs. Be careful, unless the value is a number or true or false, they will need quotation marks around them. For example `"year": 2024` is fine, as is `"show": true`, but `"title": "Feedback Piano"` require the quotes. Also make sure to leave all the curly brackets (`{ }`) and commas in place.
 
-1. To edit any of these, first navigate to [the directory](/tree/main/assets/data)
+1. To edit any of these, first navigate to the `assets/data/` directory
 
 ### Updating Contact
 
@@ -147,7 +147,7 @@ To update social media accounts for the footer, edit the `socials.json` file. Th
     ```
 5. Paste it after the last entry's `}`, before the last `] }`
     ```json
-    ...
+    //...
             "link_descriptor": "Rachael Gibson on Soundcloud",
                 "weight": 20
             }->PASTE HERE<-
@@ -194,10 +194,13 @@ This controls the 'Coming Up' section on the homepage. This can be used to adver
     ```
 5. Paste it after the last entry's `}`, before the last `] }`
     ```json
-    ...
+    {
+        [
+            {
+            //...
             "location": "O2 Academy, Liverpool",
             "link": "https://www.tabithariley.co.uk/"
-            }->PASTE HERE<-
+            } // ->PASTE HERE<-
         ]
     }
     ```
@@ -238,16 +241,16 @@ Updating the CV is a little more complex than the previous JSON files, just beca
     ```json
     {
         "works": [
-            ...
+            //...
         ],
         "residencies": [
-            ...
+            //...
         ],
         "education": [
-            ...
+            //...
         ],
         "employment": [
-            ...
+            //...
         ]
     }
     ```
@@ -267,13 +270,17 @@ Updating the CV is a little more complex than the previous JSON files, just beca
     ```
 7. Paste it after the last entry's `}`, before the last `] }`
     ```json
-    ...
-        "description": "",
-        "show": true
-        }->PASTE HERE<->
+    {
+        [
+            {
+                //...
+                "description": "",
+                "show": true
+            } // ->PASTE HERE<->
     ],
     "residencies": [
-    ...
+        //...
+    ]
     ```
 8. Fill in the fields, they are all fairly self-explanatory. `"year"` and `"show"` do not need quotation marks, while `"title"` and `"description"` do.
     ```json
@@ -303,13 +310,16 @@ Updating the CV is a little more complex than the previous JSON files, just beca
     ```
 7. Paste it after the last entry's `}`, before the last `] }`
     ```json
-    ...
+    [ 
+        {
+        //...
         "additional_info": "",
         "show": true
-        }->PASTE HERE<->
+        } // ->PASTE HERE<->
     ],
     "education": [
-    ...
+        //...
+    ]
     ```
 8. Begin to fill in the fields. `"programme"` is the name of the residency/workshop/programme.
     ```json
@@ -318,7 +328,7 @@ Updating the CV is a little more complex than the previous JSON files, just beca
 9. The `"year"` field is versatile. If it is a single year, then quotation marks aren't needed. However, if it is over multiple years, this can be written with a hypen or slash and wrapped in quotation marks.
     ```json
     "year": 2025,
-        OR
+        // OR
     "year": "2024/2025",
     ```
 10. The `"role"` field is filled in with 'Participant' by default but this can be changed to whatever role required.
@@ -352,13 +362,16 @@ Updating the CV is a little more complex than the previous JSON files, just beca
     ```
 7. Paste it after the last entry's `}`, before the last `] }`
     ```json
-    ...
+    [
+        {
+            //...
             "additional_info": "",
             "show": false
-        }->PASTE HERE<-
+        } //->PASTE HERE<-
     ],
     "employment": [
-    ...
+        //...
+    ]
     ```
 8. Begin to fill in the fields. The `"institution"` is the university, school, or provider of the course, which is thr `"course_name"` field. 
     ```json
@@ -369,7 +382,7 @@ Updating the CV is a little more complex than the previous JSON files, just beca
     ```json
     "start_date": "September 2021",
     "end_date": "July 2022",
-        OR
+        // OR
     "start_date": "2023",
     "end_date": "present",
     ```
@@ -380,13 +393,13 @@ Updating the CV is a little more complex than the previous JSON files, just beca
 11. The `"current"` field indicates whether the course is ongoing. If it is finished, `"current"` will be `false`. If it is still ongoing, it will be `true`.
     ```json
     "current": true
-        OR
+        // OR
     "current": false
     ```
 12. The `"modules"` field is a little more complicated. Between the square brackets `[ ]` you can include as many words/sentences/phrases as you like separated by commas. These can be on one line or split up onto new lines. This can also be left as empty brackets `[]`.
     ```json
     "modules": ["composition", "interactive music systems", "studio practice", "thesis"],
-        OR
+        // OR
     "modules": [
         "MUSI130 – Introduction to Classical Music History",
         "MUSI108 – Introduction to Sound Recording and Production",
@@ -394,7 +407,7 @@ Updating the CV is a little more complex than the previous JSON files, just beca
         "MUSI213 – Sampling and Remixing",
         "MUSI380 – Exploring Rhythm, Form and Musical Time"
     ],
-        OR
+        // OR
     "modules": [],
     ```
 13. The `"additional_info"` field can be used for whatever additional sentence(s) you want to add. These will only be shown as a plain sentence so try to keep it simple. It can be left blank.
@@ -404,7 +417,7 @@ Updating the CV is a little more complex than the previous JSON files, just beca
 14. The `"show"` field controls whether this information is displayed.
     ```json
     "show": true
-        OR
+        // OR
     "show": false
     ```
 15. Click the green 'Commit Changes' button in the top right.
@@ -429,10 +442,13 @@ Updating the CV is a little more complex than the previous JSON files, just beca
     ```
 7. Paste it after the last entry's `}`, before the last `] }`
     ```json
-    ...
+    {
+        [
+            {
+                //...
                 "responsibilities": [],
                 "show": false
-            }->PASTE HERE<-
+            } // ->PASTE HERE<-
         ]
     }
     ```
@@ -445,7 +461,7 @@ Updating the CV is a little more complex than the previous JSON files, just beca
     ```json
     "start_date": "September 2021",
     "end_date": "July 2022",
-        OR
+        // OR
     "start_date": "2023",
     "end_date": "present",
     ```
@@ -456,7 +472,7 @@ Updating the CV is a little more complex than the previous JSON files, just beca
 11. The `"modules"` field is a little more complicated. Between the square brackets `[ ]` you can include as many words/sentences/phrases as you like separated by commas. These can be on one line or split up onto new lines. This can also be left as empty brackets `[]`.
     ```json
     "modules": ["composition", "interactive music systems", "studio practice", "thesis"],
-        OR
+        // OR
     "modules": [
         "MUSI130 – Introduction to Classical Music History",
         "MUSI108 – Introduction to Sound Recording and Production",
@@ -464,19 +480,19 @@ Updating the CV is a little more complex than the previous JSON files, just beca
         "MUSI213 – Sampling and Remixing",
         "MUSI380 – Exploring Rhythm, Form and Musical Time"
     ],
-        OR
+        // OR
     "modules": [],
     ```
 12. The `"responsibilites"` field is the same format as the `"modules"` field to list specific responsibilities in this employment.
     ```json
     "responsibilities": [ "Creation of original sound design elements", "audio editing", "clean-up" ],
-        OR
+        // OR
     "responsibilities": [],
     ```
 13. The `"show"` field controls whether this information is displayed.
     ```json
     "show": true
-        OR
+        // OR
     "show": false
     ```
 14. Click the green 'Commit Changes' button in the top right.

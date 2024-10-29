@@ -12,10 +12,7 @@
                         rel="noreferrer"
                         target="_blank"
                     >
-                        <i 
-                            class="fa-brands fa-{{ .platform }} fa-fw" 
-                            aria-label="{{ .platform_descriptor }}"
-                        ></i>
+                        {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "brands" "faName" .platform "alt" .platform_descriptor "id" "" "faAdditional" "fa-fw")}}
                     </a>
                 </li>
             {{ end }}

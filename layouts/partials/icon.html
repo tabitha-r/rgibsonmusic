@@ -1,0 +1,24 @@
+{{ $role := "presentation" }}
+{{ if .semantic }}
+{{ $role = "img" }}
+{{ end }}
+{{ $sr := "fa-sr-only" }}
+{{ if .focusable }}
+{{ $sr = "fa-sr-only fa-sr-only-focusable" }}
+{{ end }}
+
+<i 
+    {{ if .id }}id="{{ .id }}" {{ end }} 
+    class="fa-{{ .faStyle }} fa-{{ .faName }} {{ .faAdditional }}"
+    aria-hidden="true" 
+    role="{{ $role }}" 
+    {{ if .semantic }}title="{{ .alt }}" {{ end }}
+></i>
+{{ if .semantic }}
+    <span 
+        {{ if .id }}id="{{ .id }}__alt-span" {{ end }} 
+        class="{{ $sr }}"
+    >
+        {{ .alt }}
+    </span>
+{{ end }}

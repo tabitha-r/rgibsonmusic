@@ -22,15 +22,22 @@
                             <div class="details">
                             {{ if .date }}
                                 {{ $d := time.AsTime .date }}
-                                <p><i class="fa-regular fa-fw fa-calendar-days" aria-label="Date"></i> {{ time.Format "2 January 2006" $d }}</p>
+                                <p>
+                                    {{ partial "icon" (dict "context" . "semantic" true "focusable" false "faStyle" "regular" "faName" "calendar-days" "alt" "Date" "id" "" "faAdditional" "fa-fw")}}
+                                     {{ time.Format "2 January 2006" $d }}
+                                </p>
                             {{ end }}
 
                             {{ if .time }}
-                                <p><i class="fa-regular fa-fw fa-clock" aria-label="Time"></i> {{ .time }}</p>
+                                <p>
+                                    {{ partial "icon" (dict "context" . "semantic" true "focusable" false "faStyle" "regular" "faName" "clock" "alt" "Time" "id" "" "faAdditional" "fa-fw")}}
+                                     {{ .time }}
+                                </p>
                             {{ end }}
 
                             {{ if .location }}
-                                <p><i class="fa-regular fa-fw fa-map" aria-label="Location"></i>
+                                <p>
+                                    {{ partial "icon" (dict "context" . "semantic" true "focusable" false "faStyle" "regular" "faName" "map" "alt" "Location" "id" "" "faAdditional" "fa-fw")}}
                                     {{ if .location_google_url }}
                                         <a
                                             href="{{ .location_google_url }}"

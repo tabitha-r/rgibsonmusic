@@ -13,6 +13,7 @@ export function detectTheme() {
     // Target site elements
     const site = document.querySelector('#site');
     const icon = document.querySelector('#theme-identifier-icon');
+    const iconAlt = document.querySelector('#theme-identifier-icon__alt-span');
 
     // Check elements targeted correctly
     if (site && icon) {
@@ -31,6 +32,9 @@ export function detectTheme() {
                 icon.ariaLabel = 'Current theme is dark';
                 // Save preference to local storage
                 localStorage.setItem('theme', 'dark');
+                // Change alt text
+                iconAlt.innerHTML = 'Current theme is dark';
+                icon.setAttribute("title", "Current theme is dark");
             } else {
                 // If prefer light scheme:
                 // Only save to local storage as light theme is default
@@ -45,6 +49,9 @@ export function detectTheme() {
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
             icon.ariaLabel = 'Current theme is dark';
+            // Change alt text
+            iconAlt.innerHTML = 'Current theme is dark';
+            icon.setAttribute("title", "Current theme is dark");
         };
 
         // Don't need to handle preference 'light' saved as light theme is default
@@ -58,6 +65,7 @@ export function toggleTheme() {
     // Target site elements
     const site = document.querySelector('#site');
     const icon = document.querySelector('#theme-identifier-icon');
+    const iconAlt = document.querySelector('#theme-identifier-icon__alt-span');
 
     // Check elements targeted correctly
     if (site && icon) {
@@ -74,6 +82,9 @@ export function toggleTheme() {
             icon.ariaLabel = 'Current theme is light';
             // Save preference to local storage
             localStorage.setItem('theme', 'light');
+            // Change alt text
+            iconAlt.innerHTML = 'Current theme is light';
+            icon.setAttribute("title", "Current theme is light");
         } else {
             // If current theme is 'light':
             // Set site class to 'theme__dark'
@@ -85,6 +96,9 @@ export function toggleTheme() {
             icon.ariaLabel = 'Current theme is dark';
             // Save preference to local storage
             localStorage.setItem('theme', 'dark');
+            // Change alt text
+            iconAlt.innerHTML = 'Current theme is dark';
+            icon.setAttribute("title", "Current theme is dark");
         };
 
     };

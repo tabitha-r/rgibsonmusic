@@ -15,7 +15,7 @@ a {
         color: var(--text-link-hover);
         text-decoration: underline;
 
-        span.material-symbols-outlined {
+        i.fa-solid.fa-arrow-up-right-from-square {
             scale: 120%;
         }
     };
@@ -28,8 +28,8 @@ a {
         color: var(--text-link-disabled);
     };
 
-    span.material-symbols-outlined {
-        font-size: inherit;
+    i.fa-solid.fa-arrow-up-right-from-square {
+        font-size: 0.8em;
         transition: .2s ease;
     };
 }

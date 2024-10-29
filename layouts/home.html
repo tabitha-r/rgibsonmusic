@@ -16,13 +16,17 @@
             <li class="smaller-text">🏆 Winner of the Rodewald Award 2017.</li>
         </ul>
 
-        <a class="button button__green" href="#intro" aria-label="Scroll down"><i class="fa-solid fa-arrow-down fa-fw" aria-label="Scroll down"></i></a>
+        <a class="button button__green" href="#intro" aria-label="Scroll down">
+            {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "solid" "faName" "arrow-down" "alt" "Scroll down")}}
+        </a>
     </div>
 
     <div id="intro" class="homepage-textbox">
         <h2>👋 Welcome!</h2>
         <p>Rachael Gibson is a Merseyside-based guitarist and composer whose work delves into tactile approaches to music-making, exploring how alternative notation and technology can enhance the interplay between touch and performance. She is pursuing a PhD in Composition at the University of Liverpool, funded by the NWCDTP. Her recent projects include participation in the Britten Pears Young Artist scheme, creating installation work for the Wanderscapes Project at the Old Courts Wigan, and involvement in the Yorkshire Sound Women’s Network Sound Pioneers Residency. Rachael has composed for a range of media, including theatre, short films, and various organizations such as Whatstick Theatre, The Coach House in partnership with Everyman Theatre Liverpool, Twisted Showcase Productions, Claire House Children’s Hospice, and DaDa Fest.</p>
-        <a href="{{ relURL "about" }}" class="button button__teal">Learn More <i class="fa-solid fa-arrow-right" aria-role="presentation"></i></a>
+        <a href="{{ relURL "about" }}" class="button button__teal">Learn More 
+            {{ partial "icon" (dict "context" . "semantic" false "focusable" true "faStyle" "solid" "faName" "arrow-right" "alt" "")}}
+        </a>
     </div>
 
     {{ partial "latest" }}
@@ -31,14 +35,18 @@
         <h2>🎼 Compositions</h2>
         <p>Ray has written lots of stuff.</p>
         <p>🛑🚧 TODO: Segue to Compositions list</p>
-        <a class="button button__pink" href="{{ relURL "compositions" }}">Hear More <i class="fa-solid fa-arrow-right" aria-role="presentation"></i></a>
+        <a class="button button__pink" href="{{ relURL "compositions" }}">Hear More 
+            {{ partial "icon" (dict "context" . "semantic" false "focusable" true "faStyle" "solid" "faName" "arrow-right" "alt" "")}}
+        </a>
     </div>
 
     <div class="homepage-textbox">
         <h2>✏ Projects</h2>
         <p>Ray has been on lots of adventures.</p>
         <p>🛑🚧 TODO: Segue to Projects list</p>
-        <a class="button button__red" href="{{ relURL "projects" }}">Learn More <i class="fa-solid fa-arrow-right" aria-role="presentation"></i></a>
+        <a class="button button__red" href="{{ relURL "projects" }}">Learn More 
+            {{ partial "icon" (dict "context" . "semantic" false "focusable" true "faStyle" "solid" "faName" "arrow-right" "alt" "")}}
+        </a>
     </div>
 
 {{ end }}

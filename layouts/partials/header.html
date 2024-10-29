@@ -15,7 +15,11 @@
     {{ partial "menu" (dict "menuID" "main" "page" .) }}
 
     <div class="controls">
-        <button class="control-button" id="toggle-colour-scheme" aria-label="Toggle colour scheme"><i id="theme-identifier-icon" class="fa-regular fa-moon" aria-label="Current theme is light"></i></button>
-        <button class="control-button" id="mobile-menu-button" aria-label="Navigation Menu"><i id="mobile-nav-identifier-icon" class="fa-solid fa-bars"></i></button>
+        <button class="control-button" id="toggle-colour-scheme" aria-label="Toggle colour scheme">
+            {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "regular" "faName" "moon" "alt" "Current theme is light" "id" "theme-identifier-icon")}}
+        </button>
+        <button class="control-button" id="mobile-menu-button" aria-label="Navigation Menu">
+            {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "solid" "faName" "bars" "alt" "Open navigation menu" "id" "mobile-nav-identifier-icon")}}
+        </button>
     </div>
 </header>

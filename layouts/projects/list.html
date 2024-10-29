@@ -24,7 +24,7 @@
                         style="background-image: linear-gradient(-45deg, rgba(101, 210, 204, 0.75), rgba(222, 132, 193, 0.75), rgba(189, 203, 144, 0.75)), url({{ $img.RelPermalink }});"
                     >
                         <span class="label-wrapper">
-                            <i class="fa-solid fa-circle-chevron-right" aria-label="Read more about {{ .Title }}"></i>
+                            {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "solid" "faName" "circle-chevron-right" "alt" "Read more about {{ .Title }}")}}
                             <span class="label">Read more</span>
                         </span>
                     </a>

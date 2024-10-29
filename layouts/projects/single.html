@@ -27,13 +27,17 @@
         {{ $pages := .CurrentSection.Pages }}
         <div class="next-project">
             {{ with $pages.ByDate.Next . }}
-            <a href="{{ .Permalink }}">{{ .Title | truncate 50 "..." }} <i class="fa-solid fa-arrow-right" aria-label="Go to next project"></i></a>
+            <a href="{{ .Permalink }}">{{ .Title | truncate 50 "..." }} 
+                {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "solid" "faName" "arrow-right" "alt" "Go to next project") }}
+            </a>
             {{ end }}
         </div>
         
         <div class="previous-project">
             {{ with $pages.ByDate.Prev . }}
-            <a href="{{ .Permalink }}"><i class="fa-solid fa-arrow-left" aria-label="Go to previous project"></i> {{ .Title | truncate 50 "..."}}</a>
+            <a href="{{ .Permalink }}">
+                {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "solid" "faName" "arrow-left" "alt" "Go to previous project") }}
+            {{ .Title | truncate 50 "..."}}</a>
             {{ end }}
         </div>
     </div>
