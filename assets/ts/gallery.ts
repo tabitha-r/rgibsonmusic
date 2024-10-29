@@ -6,6 +6,7 @@
  * Package: rgibsonmusic
 */
 
+// TODO: comments
 interface GalleryType {
     wrapper: HTMLElement;
     list: HTMLElement;

@@ -65,3 +65,14 @@ const galleryPrevButtons = document.querySelectorAll('.gallery-control-button__p
 galleryPrevButtons.forEach((button) => {
     button.addEventListener('click', prevGalleryImage);
 });
+
+// Homepage scroll
+function homepageScroll() {
+    document.getElementById('intro')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center'
+    });
+};
+
+document.getElementById('homepage-hero-scroll').addEventListener('click', homepageScroll);

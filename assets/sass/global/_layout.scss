@@ -15,8 +15,20 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: "content image";
-    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    max-height: 100vh;
+
     overflow: hidden;
+
+    scroll-margin-top: 0;
+    scroll-margin-bottom: 0;
 };
 
 div#content-wrapper {
@@ -27,7 +39,8 @@ div#content-wrapper {
     overflow-x: hidden;
 
     scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
+    scroll-padding-top: 4rem;
+    scroll-padding-bottom: 100vh;
 
     background-color: var(--main-bg);
 
