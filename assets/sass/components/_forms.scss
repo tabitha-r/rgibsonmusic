@@ -1,0 +1,186 @@
+/*--------------------------------------------------------------
+# Components: Forms
+----------------------------------------------------------------
+Description: Styling the all form and input elements
+*/
+
+// Package: rgibsonmusic
+
+@use 'abstracts/colours' as *;
+
+form {
+    border: 3px solid var(--input-border);
+    border-radius: 8px;
+    padding: .4rem;
+    width: fit-content;
+    background-color: var(--form-background);
+    transition: .2s ease;
+    margin: 1rem auto;
+
+    // button#contact-form__submit-button {
+    //     margin-left: auto;
+    // }
+
+    &:hover, &:focus, &:focus-within {
+        border-color: var(--input-border-hover);
+    }
+
+    &:invalid {
+        border-color: var(--input-border-invalid);
+
+        button#contact-form__submit-button {
+            cursor: not-allowed;
+            display: inline;
+        }
+
+        div.submit {
+            p.invalid-warning {
+                display: block;
+                max-width: 300px;
+                text-align: center;
+                padding: .4rem;
+                margin: .2rem;
+            }
+            p.valid-notice {
+                display: none;
+            }
+        }
+    }
+    &:valid {
+        border-color: var(--input-border-valid);
+        div.submit {
+            p.valid-notice {
+                display: block;
+            }
+        }
+    }
+
+    div.submit {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-flow: row nowrap;
+        padding: .2rem;
+        p.invalid-warning {
+            display: none;
+        }
+    }
+}
+
+div.input-container, fieldset {
+    border: 2px solid var(--input-border);
+    border-radius: 5px;
+    padding: 0.6rem 0.6rem 0.2rem 0.6rem;
+    margin: 1rem .3rem;
+    width: min-content;
+    transition: .2s ease;
+    position: relative;
+
+    &__required {
+        label::after {
+            content: 'Required';
+            text-transform: uppercase;
+            font-size: .8rem;
+            margin-left: 2rem;
+        }
+    }
+
+    label.form-label {
+        background-color: var(--form-background);
+        color: var(--input-border);
+        position: absolute;
+        margin: -1.4rem auto auto 0;
+        padding: .1rem .3rem;
+        font-size: 1rem;
+        transition: .2s ease;
+        border-radius: 5px;
+
+    }
+
+    &:hover:not(&:invalid), &:focus:not(&:invalid), &:focus-within:not(&:invalid) {
+        border-color: var(--input-border-hover);
+
+        label.form-label {
+            color: var(--input-border-hover);
+        }
+    }
+
+    &:active:not(&:invalid) {
+        border-color: var(--input-border-active);
+
+        label.form-label {
+            color: var(--input-border-active);
+        }
+    }
+}
+
+input[type='text'],
+textarea,
+input[type='number'],
+input[type='url'],
+input[type='email'],
+input[type='tel'],
+input[type='datetime-local'],
+select {
+    border-radius: 8px;
+    border: 2px solid var(--input-border);
+    margin: .6rem .2rem;
+    padding: 0.4rem;
+    transition: .2s ease;
+    background-color: var(--input-background);
+    color: var(--input-text);
+    width: 500px;
+
+    &::placeholder {
+        color: var(--input-text-placeholder);
+    }
+
+    &:hover, &:focus, &:focus-within {
+        background-color: var(--input-background-hover);
+        color: var(--input-text-hover);
+
+        &:invalid {
+            border-color: var(--input-border-invalid);
+        }
+        &:valid {
+            border-color: var(--input-border-valid);
+        }
+    }
+
+    &:active {
+        color: var(--input-text-active);
+
+        &:invalid {
+            border-color: var(--input-border-invalid);
+        }
+        &:valid {
+            border-color: var(--input-border-valid);
+        }
+    }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 630px) {
+    input[type='text'],
+    textarea,
+    input[type='number'],
+    input[type='url'],
+    input[type='email'],
+    input[type='tel'],
+    input[type='datetime-local'],
+    select {
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    input[type='text'],
+    textarea,
+    input[type='number'],
+    input[type='url'],
+    input[type='email'],
+    input[type='tel'],
+    input[type='datetime-local'],
+    select {
+        width: 280px;
+    }
+}

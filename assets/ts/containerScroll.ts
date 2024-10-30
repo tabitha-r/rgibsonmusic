@@ -5,3 +5,11 @@
  * 
  * Package: rgibsonmusic
 */
+
+export function homepageScroll() {
+    document.getElementById('intro')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center'
+    });
+};

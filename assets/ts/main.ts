@@ -12,6 +12,7 @@ import { hideNotice } from './hideNotice';
 import { handlePrint } from './print';
 import { determineNavType, toggleNav } from './mobileNav';
 import { nextGalleryImage, prevGalleryImage } from './gallery';
+import { homepageScroll } from './containerScroll';
 
 // Upon load:
 // Check for saved theme
@@ -66,13 +67,23 @@ galleryPrevButtons.forEach((button) => {
     button.addEventListener('click', prevGalleryImage);
 });
 
-// Homepage scroll
-function homepageScroll() {
-    document.getElementById('intro')?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center'
-    });
-};
+document.addEventListener('DOMContentLoaded', () => {
+    // Homepage scroll
+    let homepageHero = document.getElementById('homepage-hero-scroll');
+    if (homepageHero) {
+        homepageHero.addEventListener('click', homepageScroll);
+    }
 
-document.getElementById('homepage-hero-scroll').addEventListener('click', homepageScroll);
+    // Form test
+    let form = document.getElementById('contact-form') as HTMLFormElement;
+    if (form) {
+        form.onsubmit = (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            console.log({ name, email, message });
+        }
+    }
+})

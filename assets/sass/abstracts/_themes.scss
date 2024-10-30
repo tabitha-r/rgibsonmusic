@@ -41,6 +41,27 @@ html.theme__light {
 
     --works-identifier-solo: #{$green__300};
     --works-identifier-soundtrack: #{$orange__300};
+
+    --form-background: #{$ui__800};
+
+    --input-border: #{$ui__900};
+    --input-border-hover: #{$ui__50};
+    --input-border-active: #{$ui__50};
+    --input-border-disabled: #{$ui__50};
+
+    --input-background: #{$ui__400};
+    --input-background-hover: #{$ui__100};
+    --input-background-active: #{$ui__50};
+    --input-background-disabled: #{$ui__50};
+
+    --input-text: #{$ui__950};
+    --input-text-hover: #{$ui__950};
+    --input-text-active: #{$ui__950};
+    --input-text-disabled: #{$ui__950};
+    --input-text-placeholder: #{$ui__950};
+
+    --input-border-invalid: #{$red__500};
+    --input-border-valid: #{$green__500};
 };
 
 html.theme__dark {
@@ -72,4 +93,25 @@ html.theme__dark {
 
     --works-identifier-solo: #{$green__400};
     --works-identifier-soundtrack: #{$orange__400};
+
+    --form-background: #{$ui__700};
+
+    --input-border: #{$ui__300};
+    --input-border-hover: #{$ui__100};
+    --input-border-active: #{$ui__50};
+    --input-border-disabled: #{$ui__200};
+
+    --input-background: #{$ui__600};
+    --input-background-hover: #{$ui__300};
+    --input-background-active: #{$ui__300};
+    --input-background-disabled: #{$ui__500};
+
+    --input-text: #{$ui__100};
+    --input-text-hover: #{$ui__950};
+    --input-text-active: #{$ui__950};
+    --input-text-disabled: #{$ui__200};
+    --input-text-placeholder: #{$ui__400};
+
+    --input-border-invalid: #{$red__500};
+    --input-border-valid: #{$green__500};
 };

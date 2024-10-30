@@ -31,7 +31,7 @@ h5 { font-size: 1.4rem; }
 h6 { font-size: 1.2rem; }
 
 // General Text
-p, ol, ul, a, button, input, label, td {
+p, ol, ul, a, button, label, td, div {
     font-family: typography.$body-font-family, 
                  typography.$fallback-stack;
     font-weight: typography.$body-font-weight;
@@ -44,6 +44,14 @@ figcaption, figcaption p {
     font-weight: typography.$body-font-weight;
     font-size: 1rem;
     color: var(--secondary-font);
+}
+
+// Forms
+input, textarea, select, option, optgroup {
+    font-family: typography.$handwriting-font-family,
+                 typography.$fallback-stack;
+    font-weight: typography.$handwriting-font-weight;
+    font-size: 1.2rem;
 }
 
 /* Print

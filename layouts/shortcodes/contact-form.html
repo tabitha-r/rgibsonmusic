@@ -1,0 +1,74 @@
+<form
+	id="contact-form"
+>
+	<div class="input-container input-container__required">
+        <label
+            class="form-label"
+            for="contact-form__name-input"
+        >
+            {{ partial "icon" (dict "context" . "semantic" false "focusable" false
+            "faStyle" "solid" "faName" "id-card-clip" "faAdditional" "fa-fw")}} Name
+        </label>
+        <input
+            id="contact-form__name-input"
+            class="form-text-input"
+            type="text"
+            name="name"
+            form="contact-form"
+            placeholder="Ludwig van Beethoven"
+            autocomplete="name"
+            required
+        />
+    </div>
+	<div class="input-container input-container__required">
+        <label
+            class="form-label"
+            for="contact-form__email-input"
+        >
+            {{ partial "icon" (dict "context" . "semantic" false "focusable" false
+            "faStyle" "solid" "faName" "at" "faAdditional" "fa-fw")}} E-Mail
+        </label>
+        <input
+            id="contact-form__email-input"
+            class="form-text-input"
+            type="text"
+            name="email"
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            form="contact-form"
+            placeholder="luddy.b@hammerklavier.eg"
+            autocomplete="email"
+            required
+        />
+    </div>
+	<div class="input-container input-container__required">
+        <label
+            class="form-label"
+            for="contact-form__message-input"
+        >
+            {{ partial "icon" (dict "context" . "semantic" false "focusable" false
+            "faStyle" "solid" "faName" "pen" "faAdditional" "fa-fw")}} Message
+        </label>
+        <textarea
+            id="contact-form__message-input"
+            class="form-text-input"
+            name="message"
+            form="contact-form"
+            placeholder="I would like to ask..."
+            rows="6"
+            required
+        ></textarea>
+    </div>
+    <div class="submit">
+        <p class="invalid-warning">Looks like the form is not ready to send. Make sure you fill out all the fields correctly.</p>
+        <p class="valid-notice">Ready to send!</p>
+        <button
+            id="contact-form__submit-button"
+            class="button button__red"
+            type="submit"
+        >
+            {{ partial "icon" (dict "context" . "semantic" false "focusable" false
+            "faStyle" "regular" "faName" "paper-plane" "faAdditional" "fa-fw")}}
+            Send
+        </button>
+    </div>
+</form>

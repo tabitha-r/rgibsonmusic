@@ -7,7 +7,7 @@
 {{ define "main"}}
 
     <article class="content-article">
-        <h1>{{ .Title }}</h1>
+        <h1>{{ .Params.pre }} {{ .Title }}</h1>
             {{ .Content }}
     </article>
 

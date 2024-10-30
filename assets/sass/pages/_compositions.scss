@@ -17,12 +17,17 @@ main.compositions {
         }
     }
 
-    p span.works-identifier {
-        padding: .2rem;
-        background-color: var(--works-identifier-colour);
-        color: var(--default-black) !important;
-        border-radius: 8px;
-    }
+    p#works-identifier-key {
+        line-height: 2rem;
+        text-align: center;
+        
+        span.works-identifier {
+            padding: .2rem;
+            background-color: var(--works-identifier-colour);
+            color: var(--default-black) !important;
+            border-radius: 8px;
+        }
+    } 
 
     ul.cards-wrapper {
         list-style-type: none;
