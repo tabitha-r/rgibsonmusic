@@ -54,6 +54,17 @@ input, textarea, select, option, optgroup {
     font-size: 1.2rem;
 }
 
+// Abbreviations, Definitions
+abbr {
+    &:hover, &:focus, &:focus-within {
+        cursor: help;
+    }
+}
+
+dfn {
+    font-style: normal;
+}
+
 /* Print
 --------------------------------------------- */
 @media only print {

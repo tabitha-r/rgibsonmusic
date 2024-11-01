@@ -1,0 +1,4 @@
+{{ $src := resources.Get (print "images/" .file) }}
+
+<div class="image-divider" style="background-image: linear-gradient(-45deg, rgba(101, 210, 204, 0.52), rgba(222, 132, 193, 0.42), rgba(189, 203, 144, 0.69)), url({{ $src.RelPermalink }});">
+</div>
