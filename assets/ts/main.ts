@@ -13,6 +13,7 @@ import { handlePrint } from './print';
 import { determineNavType, toggleNav } from './mobileNav';
 import { nextGalleryImage, prevGalleryImage } from './gallery';
 import { homepageScroll } from './containerScroll';
+import { generateContactPlaceholders, handleFormSubmitTest, handleNameChange, showThankYouMessage } from './contact';
 
 // Upon load:
 // Check for saved theme
@@ -77,13 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Form test
     let form = document.getElementById('contact-form') as HTMLFormElement;
     if (form) {
-        form.onsubmit = (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-            console.log({ name, email, message });
+        handleFormSubmitTest(form);
+        generateContactPlaceholders();
+
+        document.getElementById('contact-form__name-input').addEventListener('change', handleNameChange);
+        
+        const message = document.querySelector('#contact-success-message');
+        if (message) {
+            showThankYouMessage(message);
         }
     }
 })

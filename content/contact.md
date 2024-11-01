@@ -11,4 +11,6 @@ pre = '✉'
 
 If you would like to learn more about Rachael and her works, or wish to get in touch about projects or collaborations, please do not hesitate to drop her a message using the form below.
 
+{{< contact-thanks >}}
+
 {{< contact-form >}}

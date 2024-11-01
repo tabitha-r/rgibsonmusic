@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contacts on Rachael Gibson</title>
+    <link>http://localhost:1313/contact/</link>
+    <description>Recent content in Contacts on Rachael Gibson</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 10 Sep 2024 10:31:35 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/contact/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/contact/</link>
+      <pubDate>Tue, 10 Sep 2024 10:31:35 +0100</pubDate>
+      <guid>http://localhost:1313/contact/contact/</guid>
+      <description>If you would like to learn more about Rachael and her works, or wish to get in touch about projects or collaborations, please do not hesitate to drop her a message using the form below.&#xA;✉ Thank you for message, !&#xD;It has been successfully sent. Rachael will get back to you as soon as&#xD;she can.&#xD;Name&#xD;E-Mail&#xD;Message&#xD;Looks like the form is not ready to send. Make sure you fill out all the fields correctly.</description>
+    </item>
+  </channel>
+</rss>

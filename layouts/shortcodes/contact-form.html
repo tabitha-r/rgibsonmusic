@@ -1,6 +1,9 @@
 <form
 	id="contact-form"
 >
+    {{ $thanksUrl := (print (relURL "contact") "?success=true&name=") }}
+    <input id="contact-form__redirect" type="hidden" name="_next" value="{{ $thanksUrl }}" form="contact-form"/>
+    <input type="hidden" name="_subject" value="New Website Contact Form Submission" form="contact-form">
 	<div class="input-container input-container__required">
         <label
             class="form-label"
