@@ -10,14 +10,12 @@
     {{ with . | transform.Unmarshal }}
         <ul class="contact">
             {{ if .contact.email }}
-            <li class="contact-method contact-method__email"><span class="material-symbols-outlined">
-                alternate_email
-                </span> {{ .contact.email }}</li>
+            <li class="contact-method contact-method__email">
+                {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "solid" "faName" "envelope" "alt" "E-Mail")}} {{ .contact.email }}</li>
             {{ end }}
             {{ if .contact.phone }}
-            <li class="contact-method contact-method__phone"><span class="material-symbols-outlined">
-                call
-                </span> {{ .contact.phone }}</li>
+            <li class="contact-method contact-method__phone">
+                {{ partial "icon" (dict "context" . "semantic" true "focusable" true "faStyle" "solid" "faName" "phone" "alt" "Phone")}} {{ .contact.phone }}</li>
             {{ end }}
         </ul>
     {{ end }}

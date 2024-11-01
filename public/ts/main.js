@@ -214,8 +214,7 @@
     };
   }
   function cleanInput(str) {
-    if (!str)
-      return null;
+    if (!str) return null;
     let temp = str.trim();
     return temp[0].toUpperCase() + temp.substring(1);
   }
