@@ -97,7 +97,7 @@ div.input-container, fieldset {
 
     }
 
-    &:hover:not(&:invalid), &:focus:not(&:invalid), &:focus-within:not(&:invalid) {
+    &:hover:not(&:user-invalid), &:focus:not(&:user-invalid), &:focus-within:not(&:user-invalid) {
         border-color: var(--input-border-hover);
 
         label.form-label {
@@ -105,7 +105,7 @@ div.input-container, fieldset {
         }
     }
 
-    &:active:not(&:invalid) {
+    &:active:not(&:user-invalid) {
         border-color: var(--input-border-active);
 
         label.form-label {
@@ -130,6 +130,15 @@ select {
     background-color: var(--input-background);
     color: var(--input-text);
     width: 500px;
+        
+    &:user-invalid {
+        background-color: var(--input-background-invalid);
+        border-color: var(--input-border-invalid);
+    }
+    &:user-valid {
+        border-color: var(--input-border-valid);
+        background-color: var(--input-background-valid);
+    }
 
     &::placeholder {
         color: var(--input-text-placeholder);
@@ -137,38 +146,14 @@ select {
 
     &:hover, &:focus, &:focus-within {
         color: var(--input-text-hover);
-        
-        &:invalid {
-            background-color: var(--input-background-invalid);
-            border-color: var(--input-border-invalid);
-        }
-        &:valid {
-            border-color: var(--input-border-valid);
-            background-color: var(--input-background-valid);
-        }
     }
 
     &:active {
         color: var(--input-text-active);
-
-        &:invalid {
-            border-color: var(--input-border-invalid);
-            background-color: var(--input-background-invalid);
-        }
-        &:valid {
-            border-color: var(--input-border-valid);
-            background-color: var(--input-background-valid);
-        }
     }
 }
 
 div.contact-success-message {
-    &__hidden {
-        display: none;
-    }
-    &__visible {
-        display: block;
-    }
 
     background-color: $graffiti_green;
     color: black;
@@ -178,6 +163,13 @@ div.contact-success-message {
     min-width: 250px;
     margin: .4rem auto;
     text-align: center;
+
+    &__hidden {
+        display: none;
+    }
+    &__visible {
+        display: block;
+    }
 }
 
 /* Media Queries */
