@@ -1,7 +1,7 @@
 {
     "news": [
         {
-            "show": true,
+            "show": false,
             "title": "The event/project title",
             "description": "Rachael is currently doing this thing. All the following info is optional.",
             "date": "24 Dec 2024",
@@ -12,7 +12,7 @@
             "link_label": "🎟 Get tickets"
         },
         {
-            "show": true,
+            "show": false,
             "title": "Concert",
             "description": "Rachael is premiering a brand new composition as part of the Music Festival.",
             "date": "24 Dec 2024",
