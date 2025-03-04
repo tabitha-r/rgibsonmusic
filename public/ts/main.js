@@ -1,5 +1,5 @@
 (() => {
-  // ns-hugo:D:\coding\rgibsonmusic\assets\ts\changeTheme.ts
+  // ns-hugo-imp:D:\coding\rgibsonmusic\assets\ts\changeTheme.ts
   function detectTheme() {
     const site = document.querySelector("#site");
     const icon = document.querySelector("#theme-identifier-icon");
@@ -61,7 +61,7 @@
     ;
   }
 
-  // ns-hugo:D:\coding\rgibsonmusic\assets\ts\hideNotice.ts
+  // ns-hugo-imp:D:\coding\rgibsonmusic\assets\ts\hideNotice.ts
   function hideNotice() {
     const noticebar = document.querySelector("#draft-warning-notice");
     if (noticebar) {
@@ -70,7 +70,7 @@
     ;
   }
 
-  // ns-hugo:D:\coding\rgibsonmusic\assets\ts\print.ts
+  // ns-hugo-imp:D:\coding\rgibsonmusic\assets\ts\print.ts
   function handlePrint() {
     if (window) {
       window.print();
@@ -78,7 +78,7 @@
     ;
   }
 
-  // ns-hugo:D:\coding\rgibsonmusic\assets\ts\mobileNav.ts
+  // ns-hugo-imp:D:\coding\rgibsonmusic\assets\ts\mobileNav.ts
   function determineNavType() {
     const width = window?.innerWidth;
     const nav = document.querySelector("#main-nav");
@@ -135,7 +135,7 @@
     ;
   }
 
-  // ns-hugo:D:\coding\rgibsonmusic\assets\ts\gallery.ts
+  // ns-hugo-imp:D:\coding\rgibsonmusic\assets\ts\gallery.ts
   function findGallery(id) {
     let list = document.getElementById(`${id}__list`);
     let wrapper = document.getElementById(`${id}`);
@@ -192,7 +192,7 @@
     ;
   }
 
-  // ns-hugo:D:\coding\rgibsonmusic\assets\ts\containerScroll.ts
+  // ns-hugo-imp:D:\coding\rgibsonmusic\assets\ts\containerScroll.ts
   function homepageScroll() {
     document.getElementById("intro")?.scrollIntoView({
       behavior: "smooth",
@@ -201,7 +201,7 @@
     });
   }
 
-  // ns-hugo:D:\coding\rgibsonmusic\assets\ts\contact.ts
+  // ns-hugo-imp:D:\coding\rgibsonmusic\assets\ts\contact.ts
   function handleFormSubmitTest(form) {
     form.onsubmit = (e) => {
       e.preventDefault();

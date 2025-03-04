@@ -2,8 +2,10 @@
 Copyright (c) 2022 Tabitha Riley.
 https://www.tabithariley.co.uk
 */
+@use 'path' as *;
+
 $icomoon-font-family: "TR-Logo" !default;
-$icomoon-font-path: "../fonts/tr" !default;
+$icomoon-font-path: "#{$font-path-root}/tr" !default;
 
 $icon-tr-logo: "\f63f";
 

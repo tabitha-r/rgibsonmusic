@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+# Themes 
+----------------------------------------------------------------
+Description: Styling for different themes
+*/
+
+// Package: rgibsonmusic
+
+@use 'abstracts/colours' as *;
+
+@forward 'light';
+@forward 'dark';
+
+:root {
+    --default-white: #{$graffiti_white};
+    --default-black: #{$graffiti_black};
+    --default-teal: #{$graffiti_teal};
+    --default-blue: #{$graffiti_blue};
+    --default-red: #{$graffiti_red};
+    --default-orange: #{$graffiti_orange};
+    --default-pink: #{$graffiti_pink};
+    --default-palepink: #{$graffiti_palepink};
+    --default-green: #{$graffiti_green};
+}

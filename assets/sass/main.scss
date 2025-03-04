@@ -5,146 +5,41 @@ R Gibson Music Portfolio Site
 Author: Tabitha Riley
 Author URI: https://www.tabithariley.co.uk/
 Description: Portfolio site for composer Rachael Gibson
-Version: 0.0.0
+Version: 1.0.0
 Package: rgibsonmusic
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-
-FontAwesome icons are created by Fonticons, Inc.
-Included under the FontAwesome Free License for FontAwesome icons 6.5.0 https://fontawesome.com/license
 */
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Generic
-    - Default
-    - Abstracts
-    - Fonts
-# Components
-    - Global
-    - Pages
-    - Individual Components
+# Vendors
 # Base
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
-/* Default
---------------------------------------------- */
-
-
-/* Abstracts
---------------------------------------------- */
-@use 'abstracts/typography';
-@use 'abstracts/sizing';
-@use 'abstracts/colours';
-@use 'abstracts/themes';
-
-/* Fonts
---------------------------------------------- */
-@use 'fonts/paperlogy';
-@use 'fonts/suit';
-@use 'fonts/tr';
-@use 'fonts/hakgyoansim';
-
-/* FontAwesome
---------------------------------------------- */
-@use 'fontawesome/fontawesome';
-@use 'fontawesome/brands';
-@use 'fontawesome/solid';
-@use 'fontawesome/regular';
-
-/*--------------------------------------------------------------
+# Layout
 # Components
+# Pages
+# Themes
 --------------------------------------------------------------*/
-/* Global
+
+/* Vendors
 --------------------------------------------- */
-@use 'global/text';
-@use 'global/layout';
-@use 'global/buttons';
-@use 'global/links';
+@use 'vendors';
+
+/* Base
+--------------------------------------------- */
+@use 'base';
+
+/* Layout
+--------------------------------------------- */
+@use 'layout';
+
+/* Components
+--------------------------------------------- */
+@use 'components';
 
 /* Pages
 --------------------------------------------- */
-@use 'pages/home';
-@use 'pages/compositions';
-@use 'pages/projects';
-@use 'pages/cv';
+@use 'pages';
 
-/* Individual Components
+/* Themes
 --------------------------------------------- */
-@use 'components/logo';
-@use 'components/header';
-@use 'components/nav';
-@use 'components/footer';
-@use 'components/socials';
-@use 'components/latest';
-@use 'components/gallery';
-@use 'components/iframes';
-@use 'components/forms';
-@use 'components/dividers';
-
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-:root {
-    font-size: sizing.$root-size;
-
-    --colour__black: colours.$graffiti_black;
-    --colour__white: colours.$graffiti_white;
-    --colour__teal: colours.$graffiti_teal;
-    --colour__blue: colours.$graffiti_blue;
-    --colour__red: colours.$graffiti_red;
-    --colour__orange: colours.$graffiti_orange;
-    --colour__pink: colours.$graffiti_pink;
-    --colour__palepink: colours.$graffiti_palepink;
-    --colour__green: colours.$graffiti_green;
-};
-
-html {
-    background-color: var(--header-bg);
-    transition: .2s ease;
-    color: var(--main-font);
-    height: 100%;
-};
-
-.skip-to-content-link {
-    background: colours.$graffiti_green;
-    color: #000;
-    height: 30px;
-    left: 50%;
-    padding: 8px;
-    position: absolute;
-	top: 0;
-    transform: translateY(-200%);
-    transition: transform 0.3s;
-    z-index: 99;
-};
-
-.skip-to-content-link:focus {
-  	transform: translateY(0%);
-};
-
-div.draft-warning {
-    background-color: var(--default-red);
-    color: white;
-    font-size: 3rem;
-    text-align: center;
-    padding: .4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-    border-radius: 8px;
-
-    p {
-        margin: .2rem;
-    }
-
-    &__hidden {
-        display: none;
-    }
-}
+@use 'themes';

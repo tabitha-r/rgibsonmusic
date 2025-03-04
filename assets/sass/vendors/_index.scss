@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+# Vendors 
+----------------------------------------------------------------
+Description: All third-party vendor tools
+*/
+
+// Package: rgibsonmusic
+
+/*
+# Normalize
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+@forward 'normalize';
+
+/*
+# FontAwesome
+
+FontAwesome icons are created by Fonticons, Inc.
+Included under the FontAwesome Pro License for FontAwesome icons 6.7.1 https://fontawesome.com/license
+*/
+@forward 'fontawesome/fontawesome';
+@forward 'fontawesome/brands';
+@forward 'fontawesome/solid';
+@forward 'fontawesome/regular';

@@ -7,9 +7,11 @@ This license is also available with a FAQ at:
 http://scripts.sil.org/OFL
 */
 
+@use 'path' as *;
+
 @font-face {
 	font-family: 'SUIT';
 	font-weight: 100 900;
-	src: url('../fonts/suit/SUIT-Variable.woff2') format('woff2-variations');
-    src: url('../fonts/suit/SUIT-Variable.ttf') format('truetype');
+	src: url('#{$font-path-root}/suit/SUIT-Variable.woff2') format('woff2-variations');
+    src: url('#{$font-path-root}/suit/SUIT-Variable.ttf') format('truetype');
 };

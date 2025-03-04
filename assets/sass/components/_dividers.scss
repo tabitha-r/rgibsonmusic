@@ -14,5 +14,13 @@ div.image-divider {
     min-height: 300px;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: contain;
+    background-size: cover;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 600px) {
+    div.image-divider {
+        max-height: 150px;
+        min-height: 150px;
+    }
 }

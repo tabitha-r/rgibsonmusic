@@ -1,0 +1,69 @@
+/*--------------------------------------------------------------
+# Base 
+----------------------------------------------------------------
+Description: All boilerplate and standard styling
+*/
+
+// Package: rgibsonmusic
+
+@use 'abstracts/colours';
+@use 'abstracts/sizing';
+
+:root {
+    font-size: #{sizing.$root-size};
+
+    --colour__black: #{colours.$graffiti_black};
+    --colour__white: #{colours.$graffiti_white};
+    --colour__teal: #{colours.$graffiti_teal};
+    --colour__blue: #{colours.$graffiti_blue};
+    --colour__red: #{colours.$graffiti_red};
+    --colour__orange: #{colours.$graffiti_orange};
+    --colour__pink: #{colours.$graffiti_pink};
+    --colour__palepink: #{colours.$graffiti_palepink};
+    --colour__green: #{colours.$graffiti_green};
+};
+
+html {
+    background-color: var(--header-bg);
+    transition: .2s ease;
+    color: var(--main-font);
+    height: 100%;
+};
+
+.skip-to-content-link {
+    background: #{colours.$graffiti_green};
+    color: #000;
+    height: 30px;
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+	top: 0;
+    transform: translateY(-200%);
+    transition: transform 0.3s;
+    z-index: 99;
+};
+
+.skip-to-content-link:focus {
+  	transform: translateY(0%);
+};
+
+div.draft-warning {
+    background-color: var(--default-red);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    padding: .4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    border-radius: 8px;
+
+    p {
+        margin: .2rem;
+    }
+
+    &__hidden {
+        display: none;
+    }
+}

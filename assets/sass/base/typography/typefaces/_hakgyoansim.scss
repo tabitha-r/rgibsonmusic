@@ -7,10 +7,12 @@ This license is copied below, and is also available with a FAQ at:
 http://scripts.sil.org/OFL
 */
 
+@use 'path' as *;
+
 @font-face {
     font-family: 'Hakgyoansim Geurimilgi';
-    src: url('../fonts/hakgyoansim/Hakgyoansim Geurimilgi.woff2') format('woff2'),
-      url("../fonts/hakgyoansim/Hakgyoansim Geurimilgi.woff") format("woff");
+    src: url('#{$font-path-root}/hakgyoansim/Hakgyoansim Geurimilgi.woff2') format('woff2'),
+      url("#{$font-path-root}/hakgyoansim/Hakgyoansim Geurimilgi.woff") format("woff");
     font-weight: 300 900;
     font-style: normal;
 }

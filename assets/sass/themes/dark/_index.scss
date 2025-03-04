@@ -1,0 +1,63 @@
+/*--------------------------------------------------------------
+# Themes: Dark
+----------------------------------------------------------------
+Description: Styling for website dark theme
+*/
+
+// Package: rgibsonmusic
+
+@use 'abstracts/colours' as *;
+
+html.theme__dark {
+    --main-bg: #{$ui__600};
+    --header-bg: #{$ui__800};
+    --shadow: #{$ui__950};
+    --border: #{$ui__950};
+
+    --container-bg: #{$ui__700};
+
+    --main-font: #{$ui__50};
+    --secondary-font: #{$ui__300};
+
+    --subtle-button-hover: #{$ui__600};
+    --subtle-button-active: #{$ui__700};
+    --subtle-button-disabled: #{$ui__800};
+
+    --colour-scheme-hover: #{$orange__200};
+    --colour-scheme-hover-shadow: #{$orange__300};
+
+    --nav-link: #{$ui__900};
+    --nav-link-hover: #{$ui__500};
+    --nav-link-active: #{$ui__600};
+
+    --text-link: #{$teal__300};
+    --text-link-hover: #{$teal__100};
+    --text-link-active: #{$teal__400};
+    --text-link-disabled: #{$teal__800};
+
+    --works-identifier-solo: #{$green__400};
+    --works-identifier-soundtrack: #{$orange__400};
+
+    --form-background: #{$ui__700};
+
+    --input-border: #{$ui__300};
+    --input-border-hover: #{$ui__100};
+    --input-border-active: #{$ui__50};
+    --input-border-disabled: #{$ui__200};
+
+    --input-background: #{$ui__600};
+    --input-background-hover: #{$ui__300};
+    --input-background-active: #{$ui__300};
+    --input-background-disabled: #{$ui__500};
+
+    --input-text: #{$ui__100};
+    --input-text-hover: #{$ui__950};
+    --input-text-active: #{$ui__950};
+    --input-text-disabled: #{$ui__200};
+    --input-text-placeholder: #{$ui__400};
+
+    --input-border-invalid: #{$red__500};
+    --input-border-valid: #{$green__500};
+    --input-background-invalid: #{$red__200};
+    --input-background-valid: #{$green__200};
+};

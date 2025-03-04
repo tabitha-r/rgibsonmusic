@@ -1,0 +1,39 @@
+/* Base/Typography/Fonts: Headings
+--------------------------------------------- */
+
+// Package: rgibsonmusic
+
+// Import variables
+@use 'abstracts/typography';
+
+// Primary Level 1 Heading
+h1 {
+    font-family: typography.$primary-heading-font-family, 
+                 typography.$fallback-stack;
+    font-weight: typography.$primary-heading-font-weight;
+    font-size: 2.2rem;
+}
+
+// Secondary Level Headings
+h2, h3, h4, h5, h6, th {
+    font-family: typography.$secondary-heading-font-family, 
+                 typography.$fallback-stack;
+    font-weight: typography.$secondary-heading-font-weight;
+}
+
+h2 { font-size: 2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.6rem; }
+h5 { font-size: 1.4rem; }
+h6 { font-size: 1.2rem; }
+
+/* Print
+--------------------------------------------- */
+@media only print {
+    h1 { font-size: 28px; }
+    h2 { font-size: 26px; }
+    h3 { font-size: 24px; }
+    h4 { font-size: 22px; }
+    h5 { font-size: 20px; }
+    h6 { font-size: 18px; }
+}

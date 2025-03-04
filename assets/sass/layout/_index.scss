@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# Global: Layout
+# Layout
 ----------------------------------------------------------------
 Description: Top-level basic styling for layout.
 */
@@ -8,6 +8,10 @@ Description: Top-level basic styling for layout.
 
 // Import variables
 @use 'abstracts/colours';
+
+@forward 'footer';
+@forward 'header';
+@forward 'nav';
 
 body {
     margin: 0;
